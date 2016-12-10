@@ -1,0 +1,36 @@
+{
+  "name": "halos",
+  "version": "1.0.0",
+  "description": "A base starter theme for custom theme development on WordPress project builds.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benbrehaut/halos/"
+  },
+  "keywords": [
+    "wordpress",
+    "front-end",
+    "back-end",
+    "php",
+    "css",
+    "scss",
+    "js",
+    "jquery",
+    "halo"
+  ],
+  "author": "Ben Brehaut",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.5.3",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.2.1",
+    "time-grunt": "^1.4.0"
+  }
+}
