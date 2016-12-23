@@ -25,6 +25,6 @@ require_once( 'lib/enqueue-scripts.php' );
 require_once( 'lib/theme-custom.php' );
 
 // Making all assets relative, instead of full links.
-// require_once( 'lib/relative-theme-assets.php' );
+require_once( 'lib/relative-theme-assets.php' );
 
 ?>
