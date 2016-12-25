@@ -70,7 +70,7 @@ module.exports = function(grunt) {
                 // },
             },
             scripts: {
-                files: 'assets/js/main.js', // main js file that is being worked on.
+                files: 'assets/js/**/*.js', // Any JS File in the js folder.
                 tasks: ['concat', 'uglify'],
             },
             css: {
