@@ -64,10 +64,11 @@ module.exports = function(grunt) {
                     grunt.log.writeln('Waiting for more changes...');
                 },
                 // Live Reload
-                // livereload: {
-                //     options: { livereload: false },
-                //     files: ['assets/**/*'],
-                // },
+                livereload: {
+                    options: {
+                        livereload: true
+                    }
+                },
             },
             scripts: {
                 files: 'assets/js/**/*.js', // Any JS File in the js folder.
@@ -87,7 +88,7 @@ module.exports = function(grunt) {
     // Time Grunt
     require('time-grunt')(grunt);
 
-    // Load the plugin that provides the "uglify" task.
+    // Load the plugins.
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-sass');

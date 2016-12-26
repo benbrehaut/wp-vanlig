@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
 
-    <h2>You search for: <?php echo get_search_query(); ?> </h2>
+    <h2>You searched for: <?php echo get_search_query(); ?> </h2>
 
     <?php while ( have_posts() ) : the_post(); ?>
         <?php get_template_part('template-parts/post'); ?>
