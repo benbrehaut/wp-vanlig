@@ -1,6 +1,6 @@
 <?php
 /**
- * A base support for all things WP
+ * A base support for all things WP.
  *
  * @package WordPress
  * @subpackage halos

@@ -8,6 +8,7 @@
 * @package WordPress
 * @subpackage halos
 * @since 1.0
+* @version 1.0
 */
 
 function theme_scripts() {

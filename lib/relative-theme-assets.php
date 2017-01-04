@@ -2,9 +2,12 @@
 /**
 * Protocol Relative Theme Assets
 *
+* Removes the HTTP / HTTPs from enquieued CSS and JavaScript files and uses relative paths instead.
+*
 * @package WordPress
 * @subpackage halos
 * @since 1.0
+* @version 1.0
 */
 
 if ( ! class_exists( 'Protocol_Relative_Theme_Assets' ) ) :

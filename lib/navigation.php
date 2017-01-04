@@ -2,11 +2,14 @@
 /**
 * halos menus
 *
+* Registering WordPress menu locations for the theme.
+*
 * @link https://developer.wordpress.org/themes/basics/theme-functions/
 *
 * @package WordPress
 * @subpackage halos
 * @since 1.0
+* @version 1.0
 */
 
 /*

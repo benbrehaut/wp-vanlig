@@ -6,7 +6,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package pineapplefish
+ * @package WordPress
+ * @subpackage halos
+ * @since 1.0
+ * @version 1.0
  */
 	// If a feature image is set, get the id, so it can be injected as a css background property
 	if ( has_post_thumbnail( $post->ID ) ) :

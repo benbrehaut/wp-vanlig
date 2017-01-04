@@ -7,6 +7,7 @@
 * @package WordPress
 * @subpackage halos
 * @since 1.0
+* @version 1.0
 */
 
 // WordPress Clean up
