@@ -1,0 +1,47 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Base
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: auto;
+    overflow: auto;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    line-height: rem-calc(25);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+}
+
+
+// Warnings
+// - - - - -
+
+
+// iFrame Responivness
+// - - - - -
+
+@include breakpoint(small only) {
+    iframe {
+        width: 100%;
+    }
+}

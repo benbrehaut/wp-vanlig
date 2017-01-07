@@ -1,0 +1,26 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// :Helpers
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.element-hidden {
+    @include element-invisible;
+}
+
+
+// Background Colors
+// ------------------
+
+
+// Text Colors
+// ------------------
+
+
+// Text Alignment
+// ------------------
+.text-c {
+    text-align: center;
+}
+
+.text-r {
+    text-align: right;
+}

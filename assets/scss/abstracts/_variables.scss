@@ -1,0 +1,59 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Variables
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Color Variables
+// - - - - -
+$white: #fff;
+$light-grey: #edebec;
+$dark-grey: #202021;
+$black: #000000;
+
+$primary-color--black: $black;
+$primary-color--light-grey: $light-grey;
+$primary-color--dark-grey: $dark-grey;
+$primary-color--white: $white;
+
+// Typography
+// - - - - -
+
+// Font Sizes
+$font-size--xxlarge: rem-calc(55);
+$font-size--regular: rem-calc(19);
+$font-size--large: rem-calc(28);
+$font-size--medium: rem-calc(17);
+
+// Spacing
+// - - - - -
+
+
+// Z Index index
+// - - - - -
+$z-stack: site, mobileMenu, siteOverlay, modal;
+
+// Layout & Grid
+// - - - - -
+
+$global-width: 1165px;
+$global-left: left;
+$global-right: right;
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1065px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+) !default;
+
+$breakpoint-classes: (small medium large) !default;
+
+$grid-row-width: $global-width;
+$grid-column-count: 12 !default;
+$grid-column-gutter: (
+  small: 20px,
+  medium: 30px,
+) !default;
+
+$grid-column-align-edge: true;
+$block-grid-max: 8;
