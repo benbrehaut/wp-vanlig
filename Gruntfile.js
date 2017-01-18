@@ -71,7 +71,7 @@ module.exports = function(grunt) {
                 },
             },
             scripts: {
-                files: 'assets/js/**/*.js', // Any JS File in the js folder.
+                files: 'assets/js/main.js', // The main JS file for the theme.
                 tasks: ['concat', 'uglify'],
             },
             css: {
