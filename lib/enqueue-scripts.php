@@ -23,7 +23,7 @@ function theme_scripts() {
 
     // Enqueue the main javascript file.
     // By default its the uncompressed version, but you can easily change this
-    wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0', true );
 
     // Add the comment-reply library on pages where it is necessary
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
