@@ -55,6 +55,16 @@ module.exports = function(grunt) {
         },
         // End Autoprefixer Task
 
+        imagemin: {
+            dynamic: {
+              files: [{
+                expand: true,
+                cwd: 'assets/img/',
+                src: ['**/*.{png,jpg,gif}'],
+                dest: 'assets/img/'
+              }]
+            }
+        },
 
         // Watch Task
         watch: {
@@ -93,9 +103,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin', 'watch']);
 
 };
