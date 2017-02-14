@@ -4,6 +4,31 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        browserSync: {
+            bsFiles: {
+    			src: [
+    				'*.php',
+    				'**/*.php',
+    				'Gruntfile.js',
+    				'assets/js/*.js',
+    				'*.css',
+    				'assets/css/*.css'
+    			]
+    		},
+    		options: {
+    			watchTask: true,
+    			debugInfo: true,
+    			logConnections: true,
+    			notify: true,
+    			proxy: 'test-theme.uk',
+    			ghostMode: {
+    				scroll: true,
+    				links: true,
+    				forms: true
+    			}
+    		}
+        },
+
         // Concat Task
         concat: {
             dist: {
@@ -72,13 +97,7 @@ module.exports = function(grunt) {
                 dateFormat: function(time) {
                     grunt.log.writeln('Finished in ' + time + 'ms at ' + (new Date()).toString());
                     grunt.log.writeln('Waiting for more changes...');
-                },
-                // Live Reload
-                livereload: {
-                    options: {
-                        livereload: true
-                    }
-                },
+                }
             },
             scripts: {
                 files: 'assets/js/main.js', // The main JS file for the theme.
@@ -88,6 +107,20 @@ module.exports = function(grunt) {
               files: 'assets/scss/**/*.scss',
               tasks: ['sass','postcss'],
             },
+            browserSync: {
+                files: [
+                    '*.php',
+                    '**/*.php',
+                    '*.css',
+                    'Gruntfile.js',
+                    '*.css',
+                    'assets/js/*.js',
+                    'assets/css/*.css'
+                ],
+                options: {
+                    watchTask: true
+                }
+            }
         },
         // End Watch
 
@@ -105,8 +138,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
     // Default task(s).
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['browserSync', 'watch']);
 
 };
