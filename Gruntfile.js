@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         browserSync: {
             bsFiles: {
     			src: [
+                    // Pretty much all the files in here
     				'*.php',
     				'**/*.php',
     				'Gruntfile.js',
@@ -20,7 +21,7 @@ module.exports = function(grunt) {
     			debugInfo: true,
     			logConnections: true,
     			notify: true,
-    			proxy: 'test-theme.uk',
+    			proxy: 'test-theme.uk', // Change the name to your MAMP name
     			ghostMode: {
     				scroll: true,
     				links: true,
@@ -44,8 +45,8 @@ module.exports = function(grunt) {
         // Uglify Task
         uglify: {
             build: {
-                src: 'assets/js/scripts.js', // take our concation file.
-                dest: 'assets/js/scripts.min.js' // output out and minify it.
+                src: 'assets/js/scripts.js', // take our concation file from the conat task.
+                dest: 'assets/js/scripts.min.js' // minify it.
             }
         },
         // End Uglify Task
@@ -58,7 +59,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'assets/css/style.css': 'assets/scss/style.scss'
+                    'assets/css/style.css': 'assets/scss/style.scss' // the main style .scss file.
                 }
             },
         },
@@ -70,12 +71,12 @@ module.exports = function(grunt) {
             map: true,
             processors: [
               require('autoprefixer')({
-                browsers: ['last 25 versions']
+                browsers: ['last 25 versions'] // the last 25 vers of all browsers.
               })
             ]
           },
           dist: {
-            src: 'assets/css/style.css'
+            src: 'assets/css/style.css' // the main output of our scss file.
           }
         },
         // End Autoprefixer Task
@@ -84,9 +85,9 @@ module.exports = function(grunt) {
             dynamic: {
               files: [{
                 expand: true,
-                cwd: 'assets/img/',
+                cwd: 'assets/img/', // location of all theme imgs.
                 src: ['**/*.{png,jpg,gif}'],
-                dest: 'assets/img/'
+                dest: 'assets/img/' // replace the theme imgs with the compressed one.
               }]
             }
         },
@@ -99,14 +100,17 @@ module.exports = function(grunt) {
                     grunt.log.writeln('Waiting for more changes...');
                 }
             },
+            // Watch our main script
             scripts: {
                 files: 'assets/js/main.js', // The main JS file for the theme.
                 tasks: ['concat', 'uglify'],
             },
+            // Watch main stylesheet.
             css: {
               files: 'assets/scss/**/*.scss',
               tasks: ['sass','postcss'],
             },
+            // All of the files in this theme
             browserSync: {
                 files: [
                     '*.php',
