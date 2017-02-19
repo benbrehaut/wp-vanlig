@@ -155,6 +155,17 @@ module.exports = function(grunt) {
             }
         },
 
+        svgstore: {
+          options: {
+            prefix : 'icon-', // This will prefix each <g> ID
+          },
+          default : {
+              files: {
+                'assets/img/icons/svg-defs.svg': ['assets/img/icons/*.svg'],
+              }
+            }
+        },
+
         // End Grunt Config
     });
 
@@ -174,6 +185,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
+    grunt.loadNpmTasks('grunt-svgstore');
 
     /**
     * Default task(s).

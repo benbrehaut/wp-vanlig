@@ -25,7 +25,6 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('site'); ?>>
-
 <!-- IE 9 < warning -->
 <!--[if lte IE 9]>
 	<div class="site-notice">

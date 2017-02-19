@@ -33,5 +33,10 @@
 </footer>
 <!-- /site-footer -->
 
+<!-- SVG Icons -->
+<div class="element-hidden">
+    <?php include_once('assets/img/icons/svg-defs.svg'); ?>
+</div>
+<!-- /SVG Icons -->
 <?php wp_footer(); ?>
 </body>
