@@ -1,9 +1,16 @@
 module.exports = function(grunt) {
 
-    // Grunt configuration.
+    /**
+    * Grunt configuration.
+    **/
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        /**
+        * Browser Sync Task
+        * Watches the files and refreshes our browser window.
+        * @file grunt('grunt-browser-sync');
+        **/
         browserSync: {
             bsFiles: {
     			src: [
@@ -30,7 +37,11 @@ module.exports = function(grunt) {
     		}
         },
 
-        // Concat Task
+        /**
+        * Concat Task
+        * Concates all of our javascript files into one main file, to use on the site.
+        * @file grunt('grunt-contrib-concat');
+        **/
         concat: {
             dist: {
                 src: [
@@ -40,18 +51,24 @@ module.exports = function(grunt) {
                 dest: 'assets/js/scripts.js', // concat it into one file
             },
         },
-        // End Concat Task
 
-        // Uglify Task
+        /**
+        * Uglify Tasks
+        * Minifies the main javascript file into a minified one.
+        * @file grunt('grunt-contrib-uglify');
+        **/
         uglify: {
             build: {
                 src: 'assets/js/scripts.js', // take our concation file from the conat task.
                 dest: 'assets/js/scripts.min.js' // minify it.
             }
         },
-        // End Uglify Task
 
-        // Sass Task
+        /**
+        * Sass Task
+        * Compiles our sass into css.
+        * @file grunt('grunt-sass');
+        **/
         sass: {
             options: {
                 sourceMap: true,
@@ -63,9 +80,12 @@ module.exports = function(grunt) {
                 }
             },
         },
-        // End Sass Task
 
-        // Autoprefixer (PostCSS) Task
+        /**
+        * Autoprefixer (PostCSS) Task
+        * Autoprefixes our css so we don't!
+        * @file grunt('grunt-postcss');
+        **/
         postcss: {
           options: {
             map: true,
@@ -79,8 +99,12 @@ module.exports = function(grunt) {
             src: 'assets/css/style.css' // the main output of our scss file.
           }
         },
-        // End Autoprefixer Task
 
+        /**
+        * Imagemin Task
+        * Minifies our images and removes unwanted data.
+        * @file grunt('grunt-contrib-imagemin');
+        **/
         imagemin: {
             dynamic: {
               files: [{
@@ -92,7 +116,11 @@ module.exports = function(grunt) {
             }
         },
 
-        // Watch Task
+        /**
+        * Watch Task
+        * Watches our main script file for changes, css and also browserSync.
+        * @file grunt('grunt-contrib-watch');
+        **/
         watch: {
             options: {
                 dateFormat: function(time) {
@@ -126,16 +154,19 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // End Watch
-
 
         // End Grunt Config
     });
 
-    // Time Grunt
+    /**
+    * Time Grunt
+    * Time stamps the grunt tasks.
+    **/
     require('time-grunt')(grunt);
 
-    // Load the plugins.
+    /**
+    * Load the plugins.
+    **/
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-sass');
@@ -144,7 +175,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
 
-    // Default task(s).
+    /**
+    * Default task(s).
+    **/
     grunt.registerTask('default', ['browserSync', 'watch']);
 
 };
