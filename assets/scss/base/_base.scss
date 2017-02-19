@@ -18,10 +18,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
     display: flex;
     flex-direction: column;
     line-height: 2;
-    -webkit-tap-highlight-color: transparent;
+    font-family: $font-family--normal;
 }
 
 .site-content {
