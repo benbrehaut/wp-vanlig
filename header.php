@@ -46,6 +46,7 @@
             wp_nav_menu( array(
                 'theme_location' => 'site-header-nav',
                 'container' => false,
+                'menu_class' => 'site-nav__list',
                 'fallback_cb'    => false // Do not fall back to wp_page_menu()
             ) );
         ?>
