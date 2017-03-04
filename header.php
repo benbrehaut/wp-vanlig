@@ -15,7 +15,7 @@
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
-<head>
+<head itemscope itemtype="http://schema.org/WebSite">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no">
