@@ -60,7 +60,7 @@ All JavaScript files are located with ``/assets/js``, the ``main.js`` file is th
 ###### Non default task
 Instead of putting the full SVG code, we can reference them using ``<use xlink:href="#icon-name"></use>``
 
-Place all of the icons within the ``/assets/img/icons/`` folder, and then run the command ``grunt svgstore`` which will then generate the ``svg-defs.svg`` file. This is linked at the bottom of the ``footer.php`` file.
+Place all of the icons within the ``/assets/icons/`` folder, and then run the command ``grunt svgstore`` which will then generate the ``svg-defs.svg`` file. This is linked at the bottom of the ``footer.php`` file.
 
 You can then use the icons with the ``<use></use>`` tag!
 
