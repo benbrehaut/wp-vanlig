@@ -1,8 +1,8 @@
 <?php
 /**
-* The main template file for the front-page.
+* The main template file for the contact us page
 *
-* Template Name: Contact
+* Template Name: Contact Us
 *
 * @link https://codex.wordpress.org/Template_Hierarchy
 *
