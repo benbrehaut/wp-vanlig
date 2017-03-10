@@ -17,20 +17,7 @@
 <!-- site-content -->
 
 <!-- site-footer -->
-<footer class="site-footer" role="contentinfo">
-    <div class="site-footer__col">
-        <?php
-            wp_nav_menu( array(
-                'theme_location' => 'site-footer-nav',
-                'container' => false,
-                'fallback_cb'    => false // Do not fall back to wp_page_menu()
-            ) );
-        ?>
-    </div>
-    <div class="site-footer__copy">
-        &copy; <?php echo date("Y"); ?>
-    </div>
-</footer>
+<?php get_template_part('template-parts/site-footer'); ?>
 <!-- /site-footer -->
 
 <!-- SVG Icons -->
