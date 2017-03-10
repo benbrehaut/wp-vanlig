@@ -24,14 +24,17 @@
 
     <?php wp_head(); ?>
 </head>
-<body <?php body_class('site'); ?>>
+<body <?php body_class(); ?>>
 <!-- IE 9 < warning -->
 <!--[if lte IE 9]>
-	<div class="site-notice">
+	<div class="site-notice site-notice--warning">
 		<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 	</div>
 <![endif]-->
 <!-- /IE 9 < warning -->
+
+<!-- .site-wrapper -->
+<div id="site" class="site-wrapper">
 
 <!-- site-header -->
 <header id="masthead" class="site-header" role="banner">

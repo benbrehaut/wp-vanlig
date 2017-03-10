@@ -38,5 +38,7 @@
     <?php include_once('assets/icons/svg-defs.svg'); ?>
 </div>
 <!-- /SVG Icons -->
+
+</div> <!-- /site -->
 <?php wp_footer(); ?>
 </body>
