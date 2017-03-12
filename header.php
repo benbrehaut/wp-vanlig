@@ -34,11 +34,11 @@
 <!-- /IE 9 < warning -->
 
 <!-- .site-wrapper -->
-<div id="site" class="site-wrapper">
+<div id="page" class="site">
 
 <!-- site-header -->
 <?php get_template_part('template-parts/site-header'); ?>
 <!-- /site-header -->
 
 <!-- site-content -->
-<main class="site-content" role="main">
+<main id="content" class="site-content" role="main">
