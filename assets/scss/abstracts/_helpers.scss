@@ -2,8 +2,8 @@
 // :Helpers
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.element-hidden {
-    @include element-invisible;
+.sr-hidden {
+  @include element-invisible;
 }
 
 
@@ -15,12 +15,16 @@
 // ------------------
 
 
-// Text Alignment
+// Text Helpers
 // ------------------
-.text-c {
-    text-align: center;
+._text--caps {
+  text-transform: uppercase;
 }
 
-.text-r {
-    text-align: right;
+._text--c {
+  text-align: center;
+}
+
+._text--r {
+  text-align: right;
 }

@@ -25,6 +25,10 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<!-- Skip to content -->
+<a href="#content" class="skip-link sr-hidden">Skip to Content</a>
+<!-- /Skip to content -->
+
 <!-- IE 9 < warning -->
 <!--[if lte IE 9]>
 	<div class="site-notice site-notice--warning">
