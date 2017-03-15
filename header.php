@@ -29,9 +29,18 @@
 <a href="#content" class="skip-link sr-hidden">Skip to Content</a>
 <!-- /Skip to content -->
 
+<!-- JS Warning -->
+<noscript>
+  <div class="_text--c site-notice site-notice--warning">
+    <strong>JavaScript seems to be disabled in your browser.</strong><br />
+    You must have JavaScript enabled in your browser to utilize the full functionality of this website.
+  </div>
+</noscript>
+<!-- /JS Warning -->
+
 <!-- IE 9 < warning -->
 <!--[if lte IE 9]>
-	<div class="site-notice site-notice--warning">
+	<div class="_text--c site-notice site-notice--warning">
 		<p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 	</div>
 <![endif]-->

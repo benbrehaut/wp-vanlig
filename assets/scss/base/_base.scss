@@ -40,6 +40,15 @@ ul {
 
 // Warnings
 // - - - - -
+.site-notice {
+  width: 100%;
+  float: left;
+
+  &--warning {
+    background-color: lighten(red, 20);
+    border: 1px solid red;
+  }
+}
 
 
 // iFrame Responivness
