@@ -22,14 +22,38 @@ get_header();
 
 <?php
 	if ( have_posts() ) :
+?>
 
-		/* Start the Loop */
-		while ( have_posts() ) : the_post();
+<!-- posts container -->
+<section class="articles">
 
-		    get_template_part('template-parts/post');
+  <div class="articles-grid">
+  <?php
+  		/* Start the Loop */
+  		while ( have_posts() ) : the_post();
 
-		endwhile;
+  		    get_template_part('template-parts/post');
 
+  		endwhile;
+  ?>
+  </div>
+
+  <!-- sidebar -->
+  <div class="articles-sidebar">
+    <?php get_sidebar(); ?>
+  </div>
+  <!-- sidebar -->
+
+</section>
+<!-- /posts container -->
+
+<!-- posts pagination -->
+<div class="articles-pagination">
+  <?php pagination(); ?>
+</div>
+<!-- posts pagination -->
+
+<?php
 	endif;
 ?>
 
