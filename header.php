@@ -25,6 +25,9 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<!-- .site-wrapper -->
+<div id="page" class="site">
+
 <!-- Skip to content -->
 <a href="#content" class="skip-link sr-hidden">Skip to Content</a>
 <!-- /Skip to content -->
@@ -45,9 +48,6 @@
 	</div>
 <![endif]-->
 <!-- /IE 9 < warning -->
-
-<!-- .site-wrapper -->
-<div id="page" class="site">
 
 <!-- site-header -->
 <?php get_template_part('template-parts/site-header'); ?>
