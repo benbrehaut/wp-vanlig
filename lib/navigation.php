@@ -85,29 +85,29 @@ function pagination( $args = null ) {
 
           if ($left_gap && !$right_gap) {
                $output .= sprintf('%s%s%s',
-                    ti_paginate_loop(1, $anchor),
+                    paginate_loop(1, $anchor),
                     $ellipsis,
-                    ti_paginate_loop($block_min, $pages, $page)
+                    paginate_loop($block_min, $pages, $page)
                );
           }
           else if ($left_gap && $right_gap) {
                $output .= sprintf('%s%s%s%s%s',
-                    ti_paginate_loop(1, $anchor),
+                    paginate_loop(1, $anchor),
                     $ellipsis,
-                    ti_paginate_loop($block_min, $block_high, $page),
+                    paginate_loop($block_min, $block_high, $page),
                     $ellipsis,
-                    ti_paginate_loop(($pages - $anchor + 1), $pages)
+                    paginate_loop(($pages - $anchor + 1), $pages)
                );
           }
           else if ($right_gap && !$left_gap) {
                $output .= sprintf('%s%s%s',
-                    ti_paginate_loop(1, $block_high, $page),
+                    paginate_loop(1, $block_high, $page),
                     $ellipsis,
-                    ti_paginate_loop(($pages - $anchor + 1), $pages)
+                    paginate_loop(($pages - $anchor + 1), $pages)
                );
           }
           else {
-               $output .= ti_paginate_loop(1, $pages, $page);
+               $output .= paginate_loop(1, $pages, $page);
           }
 
           if ($page < $pages && !empty($nextpage)) {
