@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 2;
-    font-family: $font-family--normal;
+    font-family: $font-family-normal;
 }
 
 .site-content {
@@ -45,15 +45,14 @@ ul {
   float: left;
 
   &--warning {
-    background-color: lighten(red, 20);
-    border: 1px solid red;
+    background-color: lighten($palette-warning, 20);
+    border: 1px solid $palette-warning;
   }
 }
 
 
 // iFrame Responivness
 // - - - - -
-
 @include breakpoint(small only) {
     iframe {
         width: 100%;

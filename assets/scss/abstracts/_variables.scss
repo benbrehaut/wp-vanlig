@@ -4,30 +4,45 @@
 
 // Color Variables
 // - - - - -
+
+// Local Colors
 $white: #fff;
 $light-grey: #edebec;
 $dark-grey: #202021;
 $black: #000000;
+$red: red;
 
-$primary-color--black: $black;
-$primary-color--light-grey: $light-grey;
-$primary-color--dark-grey: $dark-grey;
-$primary-color--white: $white;
+// Global Colors
+$palette-primary: $black;
+$palette-secondary: $light-grey;
+$palette-tertiary: $white;
+
+$palette-warning: $red;
+
+$palette-heading: $dark-grey;
+$palette-paragraph: lighten($dark-grey, 2);
 
 // Typography
 // - - - - -
 
 // Font Sizes
-$font-size--xxlarge: rem-calc(55);
-$font-size--regular: rem-calc(19);
-$font-size--large: rem-calc(28);
-$font-size--medium: rem-calc(17);
+$font-size-heading-one: rem-calc(32);
+$font-size-heading-two: rem-calc(28);
+$font-size-heading-three: rem-calc(24);
+$font-size-heading-four: rem-calc(20);
+$font-size-heading-five: rem-calc(18);
+
+$font-size-primary: rem-calc(18);
+
 
 // Font Famlily
-$font-family--normal: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-family-normal: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
 // Spacing
 // - - - - -
+$spacing-primary: rem-calc(30);
+$spacing-secondary: rem-calc(15);
+$spacing-tertiary: rem-calc(5);
 
 
 // Z Index index
@@ -36,7 +51,6 @@ $z-stack: site, mobileMenu, siteOverlay, modal;
 
 // Layout & Grid
 // - - - - -
-
 $global-width: 1165px;
 $global-left: left;
 $global-right: right;
