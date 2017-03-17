@@ -1,3 +1,23 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 // Footer
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.site-footer {
+  width: 100%;
+  float: left;
+
+  &__main {
+    padding-top: $spacing-primary;
+    padding-bottom: $spacing-primary;
+  }
+
+  &__bottom {
+    background-color: lighten($palette-primary, 10);
+    padding-top: $spacing-secondary;
+    padding-bottom: $spacing-secondary;
+  }
+
+  &__col {
+    width: 50%;
+  }
+}

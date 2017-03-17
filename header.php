@@ -29,7 +29,7 @@
 <div id="page" class="site">
 
 <!-- Skip to content -->
-<a href="#content" class="skip-link sr-hidden">Skip to Content</a>
+<a href="#content" class="skip-link _sr-hidden">Skip to Content</a>
 <!-- /Skip to content -->
 
 <!-- JS Warning -->
@@ -54,4 +54,4 @@
 <!-- /site-header -->
 
 <!-- site-content -->
-<main id="content" class="site-content" role="main">
+<main id="content" class="site-content ._slab-primary " role="main">

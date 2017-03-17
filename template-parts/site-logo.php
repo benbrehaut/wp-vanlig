@@ -9,4 +9,4 @@
  */
 ?>
 
-<h1>Site Logo</h1>
+<?php bloginfo( 'name' ); ?>

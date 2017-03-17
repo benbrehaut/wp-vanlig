@@ -2,18 +2,33 @@
 // :Helpers
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.sr-hidden {
+._sr-hidden {
   @include element-invisible;
 }
 
-
 // Background Colors
 // ------------------
+._slab-primary {
+  background-color: $palette-primary;
+}
 
+._slab-secondary {
+  background-color: $palette-secondary;
+}
+
+._slab-tertiary {
+  background-color: $palette-tertiary;
+}
 
 // Text Colors
 // ------------------
+._text-color-primary {
+  color: $palette-primary;
+}
 
+._text-color-secondary {
+  color: $palette-secondary;
+}
 
 // Text Helpers
 // ------------------
@@ -21,10 +36,14 @@
   text-transform: uppercase;
 }
 
-._text--c {
+._text-l {
+  text-align: left;
+}
+
+._text-c {
   text-align: center;
 }
 
-._text--r {
+._text-r {
   text-align: right;
 }

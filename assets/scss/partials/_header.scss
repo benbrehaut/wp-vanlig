@@ -1,3 +1,27 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 // Header
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.site-header {
+  width: 100%;
+  float: left;
+}
+
+.site-logo {
+  font-size: $font-size-heading-one;
+
+  a {
+    text-decoration: none;
+    color: $palette-primary;
+  }
+}
+
+.site-nav {
+
+  &__list {
+    @include unstyled-list;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
