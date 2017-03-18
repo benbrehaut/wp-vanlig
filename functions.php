@@ -19,6 +19,9 @@ require_once( 'lib/wp-base.php' );
 // Register Menus
 require_once( 'lib/navigation.php' );
 
+// Pagination
+require_once( 'lib/pagination.php' );
+
 // Menu Walker
 require_once( 'lib/class-halos-nav-walker.php' );
 
