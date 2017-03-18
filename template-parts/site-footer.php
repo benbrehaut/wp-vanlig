@@ -17,7 +17,9 @@
         wp_nav_menu( array(
             'theme_location' => 'site-footer-nav',
             'container' => false,
-            'fallback_cb'    => false // Do not fall back to wp_page_menu()
+            'menu_class' => 'site-footer-nav site-footer-nav__list',
+            'fallback_cb' => false, // Do not fall back to wp_page_menu()
+            'walker' => new Halos_Nav_Walker,
         ) );
       ?>
     </div>

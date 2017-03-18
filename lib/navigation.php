@@ -23,7 +23,6 @@ register_nav_menus( array(
 /*
 * Sidebar Widgets
 */
-
 function sidebar_widgets() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'halos' ),
