@@ -16,8 +16,8 @@
 * Register some basic navigation menus
 */
 register_nav_menus( array(
-    'site-header-nav' => __( 'Site Header Navigation', 'halos' ),
-    'site-footer-nav' => __( 'Site Footer Navigation', 'halos' )
+  'site-header-nav' => __( 'Site Header Navigation', 'halos' ),
+  'site-footer-nav' => __( 'Site Footer Navigation', 'halos' )
 ) );
 
 /*
