@@ -28,6 +28,9 @@ require_once( 'lib/class-halos-nav-walker.php' );
 // Theme Stylesheets and Javascript files
 require_once( 'lib/enqueue-scripts.php' );
 
+// Sticky Posts
+require_once( 'lib/sticky-posts.php' );
+
 // Theme Custom Work
 require_once( 'lib/theme-custom.php' );
 

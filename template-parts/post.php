@@ -9,7 +9,7 @@
  */
  ?>
 
- <article id="post-<?php the_ID(); ?>" <?php post_class('post post-articles__item'); ?>>
+ <article id="post-<?php the_ID(); ?>" <?php post_class('post articles-grid__item'); ?>>
     <header class="post-header">
       <a href="<?php the_permalink(); ?>">
         <?php the_title('<h2 class="post__title heading-2">','</h2>'); ?>
