@@ -10,6 +10,9 @@
 * @version 1.0
 */
 
+// WordPress Admin
+require_once( 'lib/admin.php' );
+
 // WordPress Clean up
 require_once( 'lib/cleanup.php' );
 
@@ -31,7 +34,7 @@ require_once( 'lib/enqueue-scripts.php' );
 // Sticky Posts
 require_once( 'lib/sticky-posts.php' );
 
-// Theme Custom Work
+// Add to the body_class function
 require_once( 'lib/body-class-adjustment.php' );
 
 // Theme Custom Work
@@ -40,7 +43,6 @@ require_once( 'lib/theme-custom.php' );
 // Making all assets relative, instead of full links.
 require_once( 'lib/relative-theme-assets.php' );
 
-// Add to the body_class function
 
 
 ?>

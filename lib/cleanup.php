@@ -62,15 +62,6 @@ function remove_rss_wp_version() {
 add_filter( 'the_generator', 'remove_rss_wp_version' );
 
 /*
-* Remove Customize Link on the WP Admin Menu
-*/
-function remove_customize_link() {
-    global $wp_admin_bar;
-    $wp_admin_bar->remove_menu('customize');
-}
-add_action( 'wp_before_admin_bar_render', 'remove_customize_link' );
-
-/*
 * Remove P tags wrapping images from WYSISYG fields.
 */
 function filter_ptags_images($content){
