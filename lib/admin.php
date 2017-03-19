@@ -32,15 +32,33 @@ function as_remove_menus () {
   $role_object = get_role( 'editor' );
   $role_object->add_cap( 'edit_theme_options' );
 
+  // Needed for Yoast SEO plugin..
+  $role_object->add_cap( 'theme_options' );
+  $role_object->add_cap( 'manage_options' );
+
   // Remove certain parts of the Appearance menu
   $user = wp_get_current_user();
   if ( in_array( 'editor', (array) $user->roles ) ) {
     unset($submenu['themes.php'][5]); // Themes
     unset($submenu['themes.php'][6]); // Customize
+    remove_menu_page( 'options-general.php' ); // Settings
   }
 
 }
 add_action('admin_menu', 'as_remove_menus');
+
+/**
+* Allows the editor role to use Yoast SEO.
+*
+* @return mixed|void
+* @uses yoast_seo
+**/
+function wpseo_manage_options_capability() {
+  $manage_options_cap = 'edit_others_posts';
+
+  return $manage_options_cap;
+}
+add_filter( 'wpseo_manage_options_capability', 'wpseo_manage_options_capability' );
 
 /**
 * Change link of logo to site url.
