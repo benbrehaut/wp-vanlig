@@ -32,9 +32,15 @@ require_once( 'lib/enqueue-scripts.php' );
 require_once( 'lib/sticky-posts.php' );
 
 // Theme Custom Work
+require_once( 'lib/body-class-adjustment.php' );
+
+// Theme Custom Work
 require_once( 'lib/theme-custom.php' );
 
 // Making all assets relative, instead of full links.
 require_once( 'lib/relative-theme-assets.php' );
+
+// Add to the body_class function
+
 
 ?>
