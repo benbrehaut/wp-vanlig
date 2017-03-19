@@ -8,9 +8,9 @@
  * @version 1.0
  */
 
-/*
+/**
 * Clean up wp_head output.
-*/
+**/
 function cleanup_head() {
 	// EditURI link.
 	remove_action( 'wp_head', 'rsd_link' );
@@ -53,17 +53,25 @@ function cleanup_head() {
 }
 add_action( 'init', 'cleanup_head' );
 
-/*
+/**
+* Disable autosave for posts
+**/
+function disable_autosave() {
+  wp_deregister_script( 'autosave' );
+}
+add_action( 'admin_init', 'disable_autosave' );
+
+/**
 * Remove WP version from RSS Feed
-*/
+**/
 function remove_rss_wp_version() {
     return '';
 }
 add_filter( 'the_generator', 'remove_rss_wp_version' );
 
-/*
+/**
 * Remove P tags wrapping images from WYSISYG fields.
-*/
+**/
 function filter_ptags_images($content){
   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
