@@ -70,4 +70,11 @@ function remove_customize_link() {
 }
 add_action( 'wp_before_admin_bar_render', 'remove_customize_link' );
 
+/*
+* Remove P tags wrapping images from WYSISYG fields.
+*/
+function filter_ptags_images($content){
+  return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
 ?>
