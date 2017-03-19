@@ -11,6 +11,9 @@
 * @version 1.0
 */
 
+/**
+* Add main CSS and JS files
+**/
 function theme_scripts() {
     // Enqueue the main Stylesheet.
 
@@ -37,6 +40,16 @@ function theme_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
+/**
+* Handles JavaScript detection.
+*
+* Adds a `js` class to the root `<html>` element when JavaScript is detected.
+*/
+function js_detection() {
+	echo "<script async>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
+}
+add_action( 'wp_head', 'js_detection', 0 );
 
 /**
 * Add html5shim to header
