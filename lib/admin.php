@@ -41,7 +41,8 @@ function as_remove_menus () {
   if ( in_array( 'editor', (array) $user->roles ) ) {
     unset($submenu['themes.php'][5]); // Themes
     unset($submenu['themes.php'][6]); // Customize
-    remove_menu_page( 'options-general.php' ); // Settings
+    remove_menu_page('options-general.php'); // Settings
+    remove_menu_page('edit.php?post_type=acf-field-group'); // ACF
   }
 
 }
