@@ -34,7 +34,7 @@
 
 <!-- JS Warning -->
 <noscript>
-  <div class="_text--c site-notice site-notice--warning">
+  <div class="_text-c site-notice site-notice--warning">
     <strong>JavaScript seems to be disabled in your browser.</strong><br />
     You must have JavaScript enabled in your browser to utilize the full functionality of this website.
   </div>
