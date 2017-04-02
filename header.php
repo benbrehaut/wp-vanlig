@@ -16,13 +16,13 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head itemscope itemtype="http://schema.org/WebSite">
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
 
-    <?php wp_head(); ?>
+  <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <!-- .site-wrapper -->
@@ -54,4 +54,5 @@
 <!-- /site-header -->
 
 <!-- site-content -->
-<main id="content" class="site-content ._slab-primary " role="main">
+<main id="content" class="site-content" role="main">
+<?php breadcrumbs(); ?>

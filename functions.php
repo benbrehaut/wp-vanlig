@@ -25,6 +25,9 @@ require_once( 'lib/navigation.php' );
 // Pagination
 require_once( 'lib/pagination.php' );
 
+// Breadcrumbs
+require_once( 'lib/breadcrumbs.php' );
+
 // Menu Walker
 require_once( 'lib/class-halos-nav-walker.php' );
 
