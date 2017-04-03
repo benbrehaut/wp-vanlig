@@ -108,30 +108,40 @@ add_filter( 'login_errors', 'login_fail_message' );
 * Custom CSS for Login Page
 **/
 function login_custom_css() { ?>
-    <style type="text/css">
-        .login h1 a {
-            background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/halo-logo.png') !important;
-            height: 44px !important;
-            width: 100% !important;
-        }
-        .button-primary {
-            background: #1e1e1e !important;
-            border: 1px solid #1e1e1e !important;
-            text-shadow: none !important;
-            box-shadow: none !important;
-        }
-        input[type=checkbox]:checked:before {
-          color: #131313 !important;
-        }
-        .input:focus {
-            box-shadow: none !important;
-            border-color: #1e1e1e !important;
-        }
-        a:hover {
-            color: #1e1e1e !important;
-        }
-    </style>
+  <style type="text/css">
+    .login h1 a {
+        background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/halo-logo.png') !important;
+        height: 44px !important;
+        width: 100% !important;
+    }
+    .button-primary {
+        background: #1e1e1e !important;
+        border: 1px solid #1e1e1e !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+    input[type=checkbox]:checked:before {
+      color: #131313 !important;
+    }
+    .input:focus {
+        box-shadow: none !important;
+        border-color: #1e1e1e !important;
+    }
+    a:hover {
+        color: #1e1e1e !important;
+    }
+  </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'login_custom_css' );
+
+/**
+* Allow SVGs to be uploaded into WP Media
+* @return mixed
+**/
+function svg_media($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'svg_media');
 
 ?>
