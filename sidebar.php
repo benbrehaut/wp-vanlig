@@ -19,7 +19,7 @@
   <!-- widgets -->
 
   <!-- recent posts -->
-  <h4 class="heading-4">Recent Pots</h4>
+  <h4 class="heading-4">Recent Posts</h4>
   <ul class="sidebar-posts">
     <?php
       $recent_posts = wp_get_recent_posts(array( 'orderby' => 'post_date', 'numberposts' => 4, ) );
