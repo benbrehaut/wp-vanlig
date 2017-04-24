@@ -144,4 +144,13 @@ function svg_media($mimes) {
 }
 add_filter('upload_mimes', 'svg_media');
 
+/**
+* Move Yoast Meta Box to bottom of Post / Page
+* @uses wordpress-seo
+**/
+function yoasttobottom() {
+  return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
 ?>
