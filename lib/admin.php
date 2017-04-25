@@ -153,4 +153,19 @@ function yoasttobottom() {
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
 
+/**
+* Toggle the Toolbar Toggle to be showing by deafult
+**/
+function WP_editor_toggle_toolbar($toolbar) {
+
+    // customize the buttons
+    $toolbar['theme_advanced_buttons1'] = 'bold,italic,underline,bullist,numlist,hr,blockquote,link,unlink,justifyleft,justifycenter,justifyright,justifyfull,outdent,indent';
+    $toolbar['theme_advanced_buttons2'] = 'formatselect,pastetext,pasteword,charmap,undo,redo';
+
+    // Keep the "kitchen sink" open
+    $toolbar[ 'wordpress_adv_hidden' ] = FALSE;
+    return $toolbar;
+}
+add_filter( 'tiny_mce_before_init', 'WP_editor_toggle_toolbar' );
+
 ?>
