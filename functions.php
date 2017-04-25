@@ -31,6 +31,10 @@ require_once( 'lib/breadcrumbs.php' );
 // Menu Walker
 require_once( 'lib/class-halos-nav-walker.php' );
 
+
+// TGM Plugin activation
+require_once get_stylesheet_directory() . '/lib/tgm_pa.php';
+
 // Theme Stylesheets and Javascript files
 require_once( 'lib/enqueue-scripts.php' );
 
