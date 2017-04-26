@@ -22,7 +22,7 @@
   <h4 class="heading-4">Recent Posts</h4>
   <ul class="sidebar-posts">
     <?php
-      $recent_posts = wp_get_recent_posts(array( 'orderby' => 'post_date', 'numberposts' => 4, ) );
+      $recent_posts = wp_get_recent_posts(array( 'orderby' => 'post_date', 'numberposts' => 3, 'post_type' => 'post', 'post_status' => 'publish,', ) );
       foreach( $recent_posts as $recent ) { ?>
         <li class="sidebar-posts__item">
           <a class="sidebar-post__link" href="<?php echo get_permalink($recent["ID"]) ?>"><?php echo $recent["post_title"] ?></a>
