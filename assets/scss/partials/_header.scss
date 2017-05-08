@@ -3,7 +3,14 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .site-header {
+  @include clearfix;
   width: 100%;
+  float: left;
+
+  &__top,
+  &__bottom {
+    @include grid-row;
+  }
 }
 
 .site-logo {
@@ -16,6 +23,7 @@
 }
 
 .site-nav {
+  width: 100%;
 
   &__list {
     @include unstyled-list;

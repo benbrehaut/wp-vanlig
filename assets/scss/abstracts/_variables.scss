@@ -10,7 +10,8 @@ $white: #fff;
 $light-grey: #edebec;
 $dark-grey: #202021;
 $black: #000000;
-$red: red;
+$red: #b74a48;
+$green: #26b27b;
 
 // Global Colors
 $palette-primary: $black;
@@ -18,6 +19,7 @@ $palette-secondary: $light-grey;
 $palette-tertiary: $white;
 
 $palette-warning: $red;
+$palette-success: $green;
 
 $palette-heading: $dark-grey;
 $palette-paragraph: lighten($dark-grey, 2);
