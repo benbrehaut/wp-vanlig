@@ -28,7 +28,7 @@
              </a>
          </li>
          <li class="social-links__item">
-             <a class="social-links__link social-links__link--email" href="mailto:?Subject=Look what I found at Hobbycraft&Body=<?php the_permalink() ?>%0D%0A " target="_blank" rel="noopener">
+             <a class="social-links__link social-links__link--email" href="mailto:?Subject=Look what I found on this cool website&Body=<?php the_permalink() ?>%0D%0A " target="_blank" rel="noopener">
                <span>Share on Email</span>
              </a>
          </li>
