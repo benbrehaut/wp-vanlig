@@ -100,7 +100,19 @@ add_action('admin_head', 'favicons_head');
 /**
 * Add Google Analyrics to head
 **/
-function google_analytics() { ?>
+function google_analytics() {
+
+  if ($_SERVER['HTTP_HOST']==="test-theme.uk" || $_SERVER['HTTP_HOST']==="www.test-them.uk") { ?>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXXXXX-X', 'auto'); // Change me
+      ga('send', 'pageview');
+    </script>
+  <?php } else if ($_SERVER['HTTP_HOST']==="dev.test-theme.uk") { ?>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -109,9 +121,10 @@ function google_analytics() { ?>
 
     ga('create', 'UA-XXXXXXXX-X', 'auto'); // Change me
     ga('send', 'pageview');
-
   </script>
-<?php }
+  <?php
+    }
+}
 add_action( 'wp_head', 'google_analytics', 10 );
 
 ?>
