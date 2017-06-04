@@ -1,0 +1,18 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Skip to content link
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.skip-link:focus {
+  clip: auto !important;
+  display: block;
+  width: auto;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  z-index: index($z-stack, skipToContent);
+  background-color: $palette-primary;
+  color: $palette-secondary;
+}

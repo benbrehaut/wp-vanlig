@@ -4,8 +4,6 @@
 
 .site-header {
   @include clearfix;
-  width: 100%;
-  float: left;
 
   &__top,
   &__bottom {
