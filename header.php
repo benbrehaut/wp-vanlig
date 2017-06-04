@@ -49,6 +49,10 @@
 <![endif]-->
 <!-- /IE 9 < warning -->
 
+<!-- skip-to-content -->
+<a href="#content" class="_sr-hidden skip-to-content">Skip to content</a>
+<!-- /skip-to-content -->
+
 <!-- site-header -->
 <?php get_template_part('template-parts/site-header'); ?>
 <!-- /site-header -->
