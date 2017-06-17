@@ -15,9 +15,9 @@
 get_header();
 ?>
 
-<!-- page featured image -->
-<?php get_template_part('template-parts/featured-image'); ?>
-<!-- /page featured image -->
+<!-- hero banner image -->
+<?php get_template_part('template-parts/hero-banner'); ?>
+<!-- /hero banner image -->
 
 <!-- posts container -->
 <section class="articles">

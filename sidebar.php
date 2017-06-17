@@ -40,7 +40,7 @@
       $post_categories = get_categories(array ('orderby' => 'name', 'title_li' => '', ));
       foreach ($post_categories as $post_category) { ?>
         <li class="sidebar-categories__item">
-          <a class="sidebar-categories__link" href="<?php $post_category->slug; ?>"><?php echo $post_category->name; ?> (<?php echo $post_category->count; ?>)</a>
+          <a class="sidebar-categories__link" href="<?php echo get_category_link($post_category->term_id); ?>"><?php echo $post_category->name; ?> (<?php echo $post_category->count; ?>)</a>
         </li>
       <?php }
     ?>
