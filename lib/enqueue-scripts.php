@@ -71,12 +71,22 @@ function add_ie_html5_shim () {
 add_action('wp_head', 'add_ie_html5_shim');
 
 /**
-* Removes Contact form 7 main stylesheet
+* Removes Contact form 7 main stylesheet and only loads the JS file when needed.
 **/
+// Remove CSS / JS file
 function contact_form_styles() {
   wp_deregister_style( 'contact-form-7' );
+  wp_deregister_script( 'contact-form-7');
 }
 add_action( 'wp_print_styles', 'contact_form_styles', 100 );
+
+// Load JS only on contact page
+function load_cf7_when_needed() {
+  if ( is_page_template('page-templates/page-contact.php')) {
+    wpcf7_enqueue_scripts();
+  }
+}
+add_action( 'wp_print_scripts', 'load_cf7_when_needed' );
 
 /**
 * Add Favicons to site and also admin area
