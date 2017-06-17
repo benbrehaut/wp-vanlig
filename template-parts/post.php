@@ -14,7 +14,7 @@
       <a href="<?php the_permalink(); ?>">
         <?php the_title('<h2 class="post__title heading-2">','</h2>'); ?>
       </a>
-      <time class="post__date"><?php the_date(); ?></time>
+      <time class="post__date"><?php echo get_the_date(); ?></time>
       <?php the_post_thumbnail(); ?>
     </header>
     <div class="post-content">
