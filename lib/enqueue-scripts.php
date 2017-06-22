@@ -25,7 +25,7 @@ function theme_scripts() {
   wp_deregister_script( 'jquery' );
 
   // CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-  wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', true );
 
   // Enqueue the main javascript file.
   // By default its the uncompressed version, but you can easily change this
