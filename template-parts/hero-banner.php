@@ -7,9 +7,9 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage halos
+ * @subpackage vanlig
  * @since 1.0
- * @version 1.0
+ * @version 2.0
  */
 
 // If a feature image is set, get the id, so it can be injected as a css background property
