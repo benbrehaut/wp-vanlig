@@ -3,7 +3,7 @@
 ## Introduction
 A starter theme for WordPress to create your next amazing site!
 
-The purpose of these theme is to be a starting point for theme creation on projects, reducing the time of removing parts of removing parts of other themes which we don't need, and adding our own. Simpley put, it should allow a developer to dive deep into the build project.
+The purpose of these theme is to be a starting point for theme creation, reducing the time of removing parts of removing parts of other themes which are not needed, and adding our own. Simpley put, it should allow you as a developer to dive deep into your project!
 
 ## Requirements
 * [Node.js](https://nodejs.org/en/)
