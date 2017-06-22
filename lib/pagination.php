@@ -6,9 +6,9 @@
 * For custom post pages, you must query_posts with their $args();
 *
 * @package WordPress
-* @subpackage halos
+* @subpackage vanlig
 * @since 1.0
-* @version 1.0
+* @version 2.0
 */
 
 function pagination( $args = null ) {

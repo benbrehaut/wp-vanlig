@@ -6,9 +6,9 @@
 * Cleans up menu output and uses BEM syntax.
 *
 * @package WordPress
-* @subpackage halos
+* @subpackage vanlig
 * @since 1.0
-* @version 1.0
+* @version 2.0
 */
 
 class Halos_Nav_Walker extends Walker_Nav_Menu {

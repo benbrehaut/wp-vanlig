@@ -6,9 +6,9 @@
 * {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_style }
 *
 * @package WordPress
-* @subpackage halos
+* @subpackage vanlig
 * @since 1.0
-* @version 1.0
+* @version 2.0
 */
 
 /**

@@ -5,9 +5,9 @@
 * Adjusts the body_class() function and cleans up the output of them from template files
 *
 * @package WordPress
-* @subpackage halos
+* @subpackage vanlig
 * @since 1.0
-* @version 1.0
+* @version 2.0
 */
 
 function body_class_adjust($classes) {

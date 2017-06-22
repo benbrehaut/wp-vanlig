@@ -3,9 +3,9 @@
  * The template for displaying 404 pages (not found)
  *
  * @package WordPress
- * @subpackage halos
+ * @subpackage vanlig
  * @since 1.0
- * @version 1.0
+ * @version 2.0
  */
 get_header();
 ?>

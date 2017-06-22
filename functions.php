@@ -5,9 +5,9 @@
 * @link https://developer.wordpress.org/themes/basics/theme-functions/
 *
 * @package WordPress
-* @subpackage halos
+* @subpackage vanlig
 * @since 1.0
-* @version 1.0
+* @version 2.0
 */
 
 // WordPress Admin
