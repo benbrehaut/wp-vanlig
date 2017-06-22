@@ -1,14 +1,14 @@
 {
-  "name": "halos",
-  "version": "1.0.0",
-  "description": "A base starter theme for custom theme development on WordPress project builds.",
+  "name": "vanlig",
+  "version": "2.0.0",
+  "description": "A base starter theme for custom theme development for WordPress.",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/benbrehaut/halos/"
+    "url": "https://github.com/benbrehaut/vanlig/"
   },
   "keywords": [
     "wordpress",
