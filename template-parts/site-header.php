@@ -23,7 +23,7 @@
           'container'       => false,
           'menu_class'      => 'site-nav site-nav__list',
           'fallback_cb'     => false, // Do not fall back to wp_page_menu()
-          'walker'          => new Halos_Nav_Walker,
+          'walker'          => new Vanlig_Nav_Walker,
         ) );
       ?>
     </nav>
