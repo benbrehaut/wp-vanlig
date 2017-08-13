@@ -2,6 +2,29 @@
 // :Helpers
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// Sections
+// ------------------
+.section {
+  @include clearfix;
+  width: 100%;
+  float: left;
+
+  &--default {
+    padding-top: $spacing-primary;
+    padding-bottom: $spacing-primary;
+  }
+
+  &--normal {
+    padding-top: $spacing-secondary;
+    padding-bottom: $spacing-secondary;
+  }
+
+  &--lrg {
+    padding-top: $spacing-primary * 2;
+    padding-bottom: $spacing-primary * 2;
+  }
+}
+
 // Responsive Classes
 // ------------------
 
@@ -33,7 +56,8 @@
 
 // Accessability
 // ------------------
-._sr-hidden {
+._sr-hidden,
+.screen-reader-response {
   @include element-invisible;
 }
 
