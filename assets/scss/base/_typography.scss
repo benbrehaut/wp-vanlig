@@ -53,8 +53,11 @@ button {
   cursor: pointer;
 }
 
-
 // Lists
 ul {
   margin: 0;
+}
+
+a {
+  color: $palette-primary;
 }

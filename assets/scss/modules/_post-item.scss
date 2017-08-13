@@ -3,9 +3,18 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .post {
-  width: 33.333%;
-  float: left;
-  background-color: $palette-secondary;
+  background-color: $palette-tertiary;
   padding: $spacing-secondary;
-  margin: $spacing-secondary;
+  margin-top: $spacing-secondary;
+  margin-bottom: $spacing-secondary;
+  box-shadow: $box-shadow;
+
+  &__title {
+    color: $palette-heading;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }

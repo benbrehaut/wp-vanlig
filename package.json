@@ -4,7 +4,8 @@
   "description": "A base starter theme for custom theme development for WordPress.",
   "main": "index.php",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -18,22 +19,21 @@
     "css",
     "scss",
     "js",
-    "jquery",
-    "halo"
+    "jquery"
   ],
   "author": "Ben Brehaut",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
-    "grunt": "^1.0.1",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-uglify": "^2.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^1.2.1",
-    "grunt-svgstore": "^1.0.0",
-    "time-grunt": "^1.4.0"
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-clean-css": "^3.6.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^3.0.0"
   }
 }

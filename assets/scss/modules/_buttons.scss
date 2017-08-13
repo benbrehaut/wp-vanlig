@@ -13,9 +13,9 @@
 .btn-primary {
   background-color: $palette-primary;
   color: $palette-secondary;
-  padding: $spacing-tertiary;
+  padding: $spacing-secondary;
 
   &:hover {
-    background-color: lighten($palette-primary, 20);
+    background-color: $palette-primary--lighter;
   }
 }
