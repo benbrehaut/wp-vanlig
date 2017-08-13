@@ -27,7 +27,7 @@
 
   <div class="site-footer__bottom">
     <div class="site-footer__notice">
-      &copy; <?php echo date("Y"); ?> of Company.
+      &copy; <?php echo date("Y"); ?> of <?php bloginfo('name'); ?>
     </div>
   </div>
 
