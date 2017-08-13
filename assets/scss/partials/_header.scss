@@ -5,6 +5,11 @@
 .site-header {
   @include clearfix;
 
+  a {
+    text-decoration: none;
+    color: $palette-secondary;
+  }
+
   &__top,
   &__bottom {
     @include grid-row;
@@ -13,20 +18,51 @@
 
 .site-logo {
   font-size: $font-size-heading-one;
-
-  a {
-    text-decoration: none;
-    color: $palette-primary;
-  }
 }
 
 .site-nav {
   width: 100%;
 
+  // Navigation Items
   &__list {
     @include unstyled-list;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  // Each navigation item
+  &__item {
+    flex: 1 1 auto;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__item--has-children:hover {
+    .site-nav__sub-nav {
+      @include visually-show(1);
+      transform: translateY(0px);
+    }
+  }
+
+  // Sub Navigation
+  &__sub-nav {
+    @include unstyled-list;
+    @include visually-hidden(-1);
+    transform: translateY(-10px);
+    transition: all .3s cubic-bezier(0.42,0,.58,1);
+    position: absolute;
+    display: block;
+    padding: $spacing-secondary;
+    background-color: $palette-tertiary;
+    box-shadow: $box-shadow;
+
+    a {
+      color: $palette-primary;
+
+      &:hover {
+        color: $palette-primary--lighter;
+      }
+    }
   }
 }

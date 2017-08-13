@@ -1,3 +1,13 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 // Home
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.index-page {
+  display: flex;
+  flex-flow: row wrap;
+  margin: $spacing-secondary;
+
+  &__column {
+    flex: 1 1 50%;
+  }
+}

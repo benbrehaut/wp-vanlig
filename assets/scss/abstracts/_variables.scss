@@ -3,18 +3,20 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // Color Variables
-// - - - - -
+// ------------------
 
 // Local Colors
 $white: #fff;
 $light-grey: #edebec;
 $dark-grey: #202021;
 $black: #000000;
+$ebony-clay: #242a39;
 $red: #b74a48;
 $green: #26b27b;
 
 // Global Colors
-$palette-primary: $black;
+$palette-primary: $ebony-clay;
+$palette-primary--lighter: lighten($palette-primary, 50);
 $palette-secondary: $light-grey;
 $palette-tertiary: $white;
 
@@ -22,10 +24,12 @@ $palette-warning: $red;
 $palette-success: $green;
 
 $palette-heading: $dark-grey;
-$palette-paragraph: lighten($dark-grey, 2);
+$palette-paragraph: lighten($palette-primary, 4);
+
+$box-shadow: 0 9px 45px 0 rgba($palette-primary, 0.20);
 
 // Typography
-// - - - - -
+// ------------------
 
 // Font Sizes
 $font-size-heading-one: rem-calc(32);
@@ -36,28 +40,25 @@ $font-size-heading-five: rem-calc(18);
 
 $font-size-primary: rem-calc(18);
 
-
 // Font Famlily
 $font-family-normal: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
 // Line Heights
-
 $line-height-base: 2;
 $line-height-headings: 1.2;
 
 // Spacing
-// - - - - -
+// ------------------
 $spacing-primary: rem-calc(30);
 $spacing-secondary: rem-calc(15);
 $spacing-tertiary: rem-calc(5);
 
-
 // Z Index index
-// - - - - -
+// ------------------
 $z-stack: site, skipToContent, mobileMenu, siteOverlay, modal;
 
 // Layout & Grid
-// - - - - -
+// ------------------
 $global-width: 1165px;
 $global-left: left;
 $global-right: right;

@@ -9,10 +9,10 @@
  */
 ?>
 
-<header id="masthead" class="site-header _slab-secondary" role="banner">
+<header id="masthead" class="site-header _slab-primary" role="banner">
   <div class="site-header__top">
     <div class="site-logo">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="_text-color-secondary">
         <?php get_template_part('template-parts/site-logo'); ?>
       </a>
     </div>
@@ -30,7 +30,7 @@
   </div>
   <div class="site-header__bottom">
     <div class="site-search">
-        <?php get_search_form(); ?>
+        <?php // get_search_form(); ?>
     </div>
   </div>
 </header>

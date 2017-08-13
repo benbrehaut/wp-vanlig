@@ -9,7 +9,7 @@
  */
 ?>
 
-<footer class="site-footer _slab-primary _text-color-secondary" role="contentinfo">
+<footer class="site-footer _slab-secondary _text-color-primary" role="contentinfo">
 
   <div class="site-footer__main">
     <div class="site-footer__col">
