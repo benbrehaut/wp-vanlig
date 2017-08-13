@@ -8,6 +8,31 @@ Author URI:         https://benb.uk/
 License:            MIT License
 License URI:        http://www.opensource.org/licenses/mit-license.php
 */
+.section {
+  width: 100%;
+  float: left; }
+  .section::after, .section::before {
+    content: ' ';
+    display: table;
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+  .section::after {
+    clear: both; }
+  .section--default {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem; }
+  .section--normal {
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem; }
+  .section--lrg {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem; }
+
 ._show-only--small {
   display: none; }
 
@@ -29,7 +54,8 @@ License URI:        http://www.opensource.org/licenses/mit-license.php
   ._show-only--large {
     display: block; } }
 
-._sr-hidden {
+._sr-hidden,
+.screen-reader-response {
   position: absolute !important;
   width: 1px;
   height: 1px;
@@ -1140,6 +1166,12 @@ textarea {
   overflow: auto; }
 
 /**
+ * Remove italics from <address> tag
+ */
+address {
+  font-style: normal; }
+
+/**
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
@@ -1543,6 +1575,21 @@ img.size-full {
 .site-footer {
   width: 100%;
   float: left; }
+  .site-footer a {
+    color: inherit; }
+  .site-footer__row {
+    max-width: 1165px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
   .site-footer__main {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem; }
@@ -1550,7 +1597,36 @@ img.size-full {
     padding-top: 0.9375rem;
     padding-bottom: 0.9375rem; }
   .site-footer__col {
-    width: 50%; }
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    max-width: 33.33333%; }
+    @media screen and (min-width: 40em) {
+      .site-footer__col {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+
+.site-footer-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.site-social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .site-social__item {
+    display: inline-block; }
+    .site-social__item:not(:first-of-type) {
+      margin-left: 0.5rem; }
 
 .breadcrumbs {
   width: 100%; }
