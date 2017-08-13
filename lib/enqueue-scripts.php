@@ -17,9 +17,8 @@
 function theme_scripts() {
 
   // Enqueue the main Stylesheet.
-  $theme_css = get_template_directory() . '/assets/css/style.css';
-
-  wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/assets/css/style.css', array(), filemtime( $theme_css ), 'all' );
+  // By default its the uncompressed version, but you can easily change this
+  wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/assets/css/dist/main.css', array(), 'all' );
 
   // Deregister the jquery version bundled with WordPress, as it does get old.
   wp_deregister_script( 'jquery' );
@@ -29,10 +28,7 @@ function theme_scripts() {
 
   // Enqueue the main javascript file.
   // By default its the uncompressed version, but you can easily change this
-
-  $theme_js = get_template_directory() . '/assets/js/scripts.js';
-
-  wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), filemtime( $theme_js ), true );
+  wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/assets/js/dist/main.js', array('jquery'), true );
 
   // Add the comment-reply library on pages where it is necessary
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

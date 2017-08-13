@@ -1,6 +1,6 @@
 <?php
 /**
-* halos functions and definitions
+* Vanlig functions and definitions
 *
 * @link https://developer.wordpress.org/themes/basics/theme-functions/
 *
@@ -29,7 +29,7 @@ require_once( 'lib/pagination.php' );
 require_once( 'lib/breadcrumbs.php' );
 
 // Menu Walker
-require_once( 'lib/class-halos-nav-walker.php' );
+require_once( 'lib/class-vanlig-nav-walker.php' );
 
 
 // TGM Plugin activation

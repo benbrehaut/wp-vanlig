@@ -9,7 +9,7 @@
  */
 ?>
 
-<footer class="site-footer _slab-primary _text-color-secondary" role="contentinfo">
+<footer class="site-footer _slab-secondary _text-color-primary" role="contentinfo">
 
   <div class="site-footer__main">
     <div class="site-footer__col">
@@ -19,7 +19,7 @@
             'container' => false,
             'menu_class' => 'site-footer-nav site-footer-nav__list',
             'fallback_cb' => false, // Do not fall back to wp_page_menu()
-            'walker' => new Halos_Nav_Walker,
+            'walker' => new Vanlig_Nav_Walker,
         ) );
       ?>
     </div>

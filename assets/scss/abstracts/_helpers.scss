@@ -2,6 +2,37 @@
 // :Helpers
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+// Responsive Classes
+// ------------------
+
+// Show only function to generate hidden classes
+@each $show-only in $breakpoint-classes {
+  ._show-only--#{$show-only} {
+    display: none;
+  }
+}
+
+._show-only--small {
+  @include breakpoint(small only) {
+    display: block;
+  }
+}
+
+._show-only--medium {
+  @include breakpoint(medium only) {
+    display: block;
+  }
+}
+
+._show-only--large {
+  @include breakpoint(large only) {
+    display: block;
+  }
+}
+
+
+// Accessability
+// ------------------
 ._sr-hidden {
   @include element-invisible;
 }
@@ -30,6 +61,10 @@
   color: $palette-secondary;
 }
 
+._text-color-tertiary {
+  color: $palette-tertiary;
+}
+
 // Text Helpers
 // ------------------
 ._text-caps {
@@ -46,4 +81,12 @@
 
 ._text-r {
   text-align: right;
+}
+
+._text-caps {
+  text-transform: uppercase;
+}
+
+._unstyled-list {
+  @include unstyled-list;
 }

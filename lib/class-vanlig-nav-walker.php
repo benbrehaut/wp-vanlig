@@ -11,7 +11,7 @@
 * @version 2.0
 */
 
-class Halos_Nav_Walker extends Walker_Nav_Menu {
+class Vanlig_Nav_Walker extends Walker_Nav_Menu {
   /**
    * Starts the list before the elements are added.
    *

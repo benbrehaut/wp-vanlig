@@ -1,6 +1,6 @@
 <?php
 /**
-* halos menus
+* vanlig menus
 *
 * Registering WordPress menu locations for the theme.
 *
@@ -16,8 +16,8 @@
 * Register some basic navigation menus
 */
 register_nav_menus( array(
-  'site-header-nav' => __( 'Site Header Navigation', 'halos' ),
-  'site-footer-nav' => __( 'Site Footer Navigation', 'halos' )
+  'site-header-nav' => __( 'Site Header Navigation', 'vanlig' ),
+  'site-footer-nav' => __( 'Site Footer Navigation', 'vanlig' )
 ) );
 
 /*
@@ -25,7 +25,7 @@ register_nav_menus( array(
 */
 function sidebar_widgets() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'halos' ),
+		'name'          => esc_html__( 'Sidebar', 'vanlig' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',

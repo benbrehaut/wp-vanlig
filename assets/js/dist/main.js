@@ -1,5 +1,5 @@
 $(function() {
-    // Start jQuery
+  // Start jQuery
 
   /*
   * Console log that DOM is ready.
@@ -13,10 +13,10 @@ $(function() {
   var html = $('html');
 
   if ( isTouchDevice ) {
-      html.addClass('touch');
+    html.addClass('touch');
   }
   else {
-      html.addClass('no-touch');
+    html.addClass('no-touch');
   }
 
   /**
@@ -97,7 +97,7 @@ $(function() {
   var $browser = checkBrowserVer();
 
   $('html').addClass( $browser.name.toLowerCase() );
-  $('html').addClass( $browser.name.toLowerCase() + '-' + $browser.version );
+	$('html').addClass( $browser.name.toLowerCase() + '-' + $browser.version );
 
-    // End jQuery
+  // End jQuery
 });
