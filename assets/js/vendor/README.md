@@ -4,7 +4,7 @@ Use the following pattern;
 
 ```
 js
-└───libs
+vendor
 │   └───library_folder1
 │   │    │   library-file1.js
 │   │   
