@@ -150,6 +150,17 @@
       <div class="site-footer__notice">
         &copy; <?php echo date("Y"); ?> of <?php bloginfo('name'); ?>
       </div>
+      <nav class="site-footer__bottom-nav">
+        <?php
+            wp_nav_menu( array(
+                'theme_location' => 'site-footer-bottom-nav',
+                'container' => false,
+                'menu_class' => 'site-footer-bottom-nav site-footer-nav__list',
+                'fallback_cb' => false, // Do not fall back to wp_page_menu()
+                'walker' => new Vanlig_Nav_Walker,
+            ) );
+          ?>
+      </nav>
     </div>
   </div>
   <!-- bottom footer part -->
