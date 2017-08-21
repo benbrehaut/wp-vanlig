@@ -112,26 +112,29 @@ add_filter( 'login_errors', 'login_fail_message' );
 **/
 function login_custom_css() { ?>
   <style type="text/css">
+    :root {
+      --palette-primary: #242a39;
+    }
     .login h1 a {
         background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/assets/img/halo-logo.png') !important;
         height: 44px !important;
         width: 100% !important;
     }
     .button-primary {
-        background: #1e1e1e !important;
-        border: 1px solid #1e1e1e !important;
+        background: var(--palette-primary) !important;
+        border: 1px solid var(--palette-primary) !important;
         text-shadow: none !important;
         box-shadow: none !important;
     }
     input[type=checkbox]:checked:before {
-      color: #131313 !important;
+      color: var(--palette-primary) !important;
     }
     .input:focus {
         box-shadow: none !important;
-        border-color: #1e1e1e !important;
+        border-color: var(--palette-primary) !important;
     }
     a:hover {
-        color: #1e1e1e !important;
+        color: var(--palette-primary) !important;
     }
   </style>
 <?php }

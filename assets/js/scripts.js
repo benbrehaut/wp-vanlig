@@ -99,5 +99,13 @@ $(function() {
   $('html').addClass( $browser.name.toLowerCase() );
 	$('html').addClass( $browser.name.toLowerCase() + '-' + $browser.version );
 
+  /**
+  * Toggle Site Menu
+	**/
+	$('.js-site-toggle-menu').click( function() {
+		$(this).toggleClass('is-active');
+		$('.js-site-menu').toggleClass('is-active');
+	});
+
   // End jQuery
 });

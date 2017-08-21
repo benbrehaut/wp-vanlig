@@ -16,7 +16,10 @@
         <?php get_template_part('template-parts/site-logo'); ?>
       </a>
     </div>
-    <nav class="site-nav-wrapper" role="navigation">
+    <div class="site-header__toggler js-site-toggle-menu">
+      <button role="button" class="_text-color-secondary _text-caps btn">Menu</button>
+    </div>
+    <nav class="js-site-menu site-nav-wrapper" role="navigation">
       <?php
         wp_nav_menu( array(
           'theme_location'  => 'site-header-nav',
