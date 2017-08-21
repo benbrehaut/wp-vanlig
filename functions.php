@@ -31,7 +31,6 @@ require_once( 'lib/breadcrumbs.php' );
 // Menu Walker
 require_once( 'lib/class-vanlig-nav-walker.php' );
 
-
 // TGM Plugin activation
 require_once get_stylesheet_directory() . '/lib/tgm_pa.php';
 
@@ -49,7 +48,5 @@ require_once( 'lib/theme-custom.php' );
 
 // Making all assets relative, instead of full links.
 require_once( 'lib/relative-theme-assets.php' );
-
-
 
 ?>

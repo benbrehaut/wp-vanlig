@@ -17,7 +17,8 @@
 */
 register_nav_menus( array(
   'site-header-nav' => __( 'Site Header Navigation', 'vanlig' ),
-  'site-footer-nav' => __( 'Site Footer Navigation', 'vanlig' )
+  'site-footer-nav' => __( 'Site Footer Navigation', 'vanlig' ),
+  'site-footer-bottom-nav' => __( 'Site Footer Bottom Navigation', 'vanlig' )
 ) );
 
 /*
