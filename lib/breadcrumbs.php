@@ -13,7 +13,7 @@ function breadcrumbs() {
   $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
   $home = 'Home'; // text for the 'Home' link
   $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
-  $before = '<li class="breadcrumbs__item"><span class="breadcrumbs__item--current">'; // tag before the current crumb
+  $before = '<li class="breadcrumbs__item"><span class="breadcrumbs__item--current" aria-current="page">'; // tag before the current crumb
   $after = '</span></li>'; // tag after the current crumb
 
   global $post;
