@@ -93,6 +93,8 @@ gulp.task('browser-sync', ['scripts', 'styles'], function () {
     files: [
       "*.php",
       '**/*.php',
+      '*.twig',
+      '**/*.twig',
       'gulpfile.js',
       outputJSFileLocation + '/*.js',
       outputCSSFileLocation + '/*.css'
