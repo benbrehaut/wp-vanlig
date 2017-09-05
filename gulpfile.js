@@ -14,6 +14,7 @@ var imagemin = require('gulp-imagemin');
 var prefix = require('gulp-autoprefixer');
 var svgstore = require('gulp-svgstore');
 var sourcemaps = require('gulp-sourcemaps');
+var babel = require('gulp-babel');
 
 /**
  * @function variables
@@ -50,6 +51,9 @@ var autoprefixerOptions = {
  */
 gulp.task('scripts', function () {
   return gulp.src([jsFiles, mainJSFile])
+    .pipe(babel({
+      presets: ['env']
+    }))
     .pipe(plumber())
     .pipe(concat(outputJSFile))  // output main JavaScript file without uglify
     .pipe(gulp.dest(outputJSFileLocation))
