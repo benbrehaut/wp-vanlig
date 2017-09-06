@@ -13,6 +13,8 @@ var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var prefix = require('gulp-autoprefixer');
 var svgstore = require('gulp-svgstore');
+var sourcemaps = require('gulp-sourcemaps');
+var babel = require('gulp-babel');
 
 /**
  * @function variables
@@ -49,6 +51,9 @@ var autoprefixerOptions = {
  */
 gulp.task('scripts', function () {
   return gulp.src([jsFiles, mainJSFile])
+    .pipe(babel({
+      presets: ['env']
+    }))
     .pipe(plumber())
     .pipe(concat(outputJSFile))  // output main JavaScript file without uglify
     .pipe(gulp.dest(outputJSFileLocation))
@@ -65,6 +70,7 @@ gulp.task('scripts', function () {
  */
 gulp.task('styles', function () {
   return gulp.src(mainSassFile)
+    .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['scss'],
       onError: browserSync.notify
@@ -72,6 +78,7 @@ gulp.task('styles', function () {
     .pipe(prefix(autoprefixerOptions, { cascade: true }))
     .pipe(plumber())
     .pipe(concat(outputCSSFile)) // output main CSS file without cleanCSS
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(outputCSSFileLocation))
     .pipe(cleanCSS())
     .pipe(concat(outputCSSFileCompressed)) // output main CSS file w/ cleanCSS
@@ -90,6 +97,8 @@ gulp.task('browser-sync', ['scripts', 'styles'], function () {
     files: [
       "*.php",
       '**/*.php',
+      '*.twig',
+      '**/*.twig',
       'gulpfile.js',
       outputJSFileLocation + '/*.js',
       outputCSSFileLocation + '/*.css'
