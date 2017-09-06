@@ -1,5 +1,8 @@
 {
  "name": "App",
+ "start_url": "/?homescreen=1",
+ "display": "standalone",
+ "theme_color": "#2c3346", 
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

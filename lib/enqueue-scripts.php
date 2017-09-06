@@ -99,8 +99,6 @@ function favicons_head() { ?>
 	<meta name="theme-color" content="#1e1e1e">
 <?php }
 add_action( 'wp_head', 'favicons_head' );
-add_action('login_head', 'favicons_head');
-add_action('admin_head', 'favicons_head');
 
 /**
 * Add Google Analyrics to head
