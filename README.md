@@ -52,6 +52,8 @@ All Sass files are located within ``/assets/scss``, with the ``style.scss`` outp
 ###### Default task
 All JavaScript files are located with ``/assets/js``, the ``scripts.js`` file is the main Javascript file for the theme, with external third party libraries within the ``vendor`` folder. All files within this will be concatenated into the ``dist/main.js`` file and ``dist/main.min.js``
 
+The scripts task will also run the main JavaScript file through Babel, which means you can use all the new ES2015, ES2016 etc. features without fear of them not working in some older browsers!
+
 * ``/assets/js/scripts.js`` is the main JavaScript file. This is where you should write all of your JavaScript.
 * ``/assets/js/dist/main.js`` is the uncompressed and concatenated JavaScript file from all of the files within the ``/assets/js/vendor/*.js`` folder and ``/assets/js/scripts.js`` file.
 * ``/assets/js/dist/main.min.js`` is our compressed version of the ``/assets/js/dist/main.js`` file.
