@@ -1,0 +1,41 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Object: _media-object
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Variables
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$o-media-object-figure-spacing: rem-calc(16);
+$o-media-object-spacing: $spacing-tertiary;
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Media Object
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.o-media-object {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $o-media-object-spacing;
+
+  &__figure {
+    margin-right: $o-media-object-figure-spacing;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &--reverse {
+    .o-media-object__figure {
+      margin: 0 0 0 $o-media-object-figure-spacing;
+    }
+  }
+
+  &--stack {
+    .o-media-object__body {
+      @include breakpoint(small only) {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}

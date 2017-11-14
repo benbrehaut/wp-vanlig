@@ -1,0 +1,27 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Object: _hero-banner
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Variables
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$o-hero-banner-height: rem-calc(400);
+$o-hero-banner-padding: rem-calc(30);
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Hero Banner
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.o-hero-banner {
+  @include background-img;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  min-height: $o-hero-banner-height;
+  padding: $o-hero-banner-padding;
+
+  &--center {
+    justify-content: center;
+    text-align: center;
+  }
+}

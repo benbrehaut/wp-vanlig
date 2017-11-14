@@ -1,0 +1,33 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Object: _site-footer
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.o-site-footer {
+  background-color: #1b1b1b;
+  width: 100%;
+  padding-top: rem-calc(50);
+  padding-bottom: rem-calc(50);
+
+  &__col {
+    @include grid-col(4);
+    margin-bottom: rem-calc(15);
+
+    @include breakpoint(small only) {
+      @include grid-col(12);
+    }
+  }
+
+  &__social {
+    @include grid-col(12);
+  }
+
+  &__notice,
+  &__bottom-nav {
+    @include grid-col(6);
+    margin-bottom: rem-calc(15);
+
+    @include breakpoint(small only) {
+      @include grid-col(12);
+    }   
+  }
+}

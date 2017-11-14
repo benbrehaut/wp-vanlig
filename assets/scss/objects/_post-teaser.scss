@@ -1,0 +1,17 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Object: _post-teaser
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.o-post-teaser {
+  margin-top: rem-calc(15);
+  margin-bottom: rem-calc(15);
+
+  &__title {
+    font-weight: bold;
+    margin-bottom: rem-calc(10);
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

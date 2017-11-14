@@ -29,12 +29,12 @@
 <div id="page" class="site">
 
 <!-- Skip to content -->
-<a href="#content" class="skip-link _sr-hidden">Skip to Content</a>
+<a href="#content" class="c-skip-to-content">Skip to Content</a>
 <!-- /Skip to content -->
 
 <!-- JS Warning -->
 <noscript>
-  <div class="_text-c site-notice site-notice--warning">
+  <div class="u-text-c o-callout">
     <strong>JavaScript seems to be disabled in your browser.</strong><br />
     You must have JavaScript enabled in your browser to utilize the full functionality of this website.
   </div>
@@ -50,7 +50,7 @@
 <!-- /IE 9 < warning -->
 
 <!-- skip-to-content -->
-<a href="#content" class="_sr-hidden skip-to-content">Skip to content</a>
+<a href="#content" class="c-skip-to-content">Skip to content</a>
 <!-- /skip-to-content -->
 
 <!-- site-header -->

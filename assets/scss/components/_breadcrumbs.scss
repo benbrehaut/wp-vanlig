@@ -1,0 +1,59 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Components: _breadcrumbs
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Variables
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$c-breadcrumbs-bg-color: $palette-secondary !default;
+$c-breadcrumbs-text-color: $palette-paragraph !default;
+$c-breadcrumbs-active-color: lighten($palette-primary, 30) !default;
+$c-breadcrumbs-font-size: $font-size-primary !default;
+$c-breadcrumbs-item-padding: rem-calc(10) !default;
+$c-breadcrumbs-container-padding: rem-calc(20) !default;
+$c-breadcrumbs-text-uppercase: false !default;
+$c-breadcrumbs-splitter: '\2044' !default;
+$c-breadcrumbs-splitter-color: lighten($palette-primary, 30) !default;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Breadcrumbs
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+.c-breadcrumbs {
+  @include clearfix;
+  width: 100%;
+  background-color: $palette-secondary;
+  color: $c-breadcrumbs-text-color;
+  font-size: $c-breadcrumbs-font-size;
+  padding: $c-breadcrumbs-container-padding;
+
+  @if $c-breadcrumbs-text-uppercase {
+    text-transform: uppercase;
+  }
+
+  &__inner {
+    @include unstyled-list;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:first-of-type):before {
+      content: $c-breadcrumbs-splitter;
+      color: $c-breadcrumbs-splitter-color;
+      padding-left: $c-breadcrumbs-item-padding;
+      padding-right: $c-breadcrumbs-item-padding;
+    }
+
+    &--current {
+      color: $c-breadcrumbs-active-color;
+    }
+  }
+
+  &__link {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

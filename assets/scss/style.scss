@@ -1,49 +1,86 @@
-/*
-Theme Name:         vanlig
-Theme URI:          https://github.com/benbrehaut/vanlig/
-Description:        vanlig is a base theme, for the purpose of creating custom theme for your next amazing projects.
-Version:            2.0
-Author:             Ben Brehaut
-Author URI:         https://benb.uk/
-License:            MIT License
-License URI:        http://www.opensource.org/licenses/mit-license.php
-*/
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Vanlig
+// - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// Abstracts
-@import 'abstracts/unit',
-        'abstracts/value',
-        'abstracts/selector',
-        'abstracts/variables',
-        'abstracts/flex',
-        'abstracts/breakpoint',
-        'abstracts/mixins',
-        'abstracts/placeholders',
-        'abstracts/helpers';
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Charset
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+@charset 'utf-8';
 
-// Libs
-@import 'libs/grid/grid';
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Settings
+// Variables and site settings live here
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+@import 'settings/unit',
+        'settings/variables';
 
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Tools
+// Contains functions / mixins to be used, it does not output any code.
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+@import 'tools/value',
+        'tools/selector',
+        'tools/flex',
+        'tools/breakpoint',
+        'tools/mixins';
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Vendor
+// 3rd Party Files (Ideally this should be very low)
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+@import 'vendor/wordpress';
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
 // Base
+// Very broad area of styling.
+// - - - - - - - - - - - - - - - - - - - - - - - - -
 @import 'base/reset',
         'base/fonts',
-        'base/base',
-        'base/typography',
-        'base/wordpress';
+        'base/base';
 
-// Modules
-@import 'modules/buttons',
-        'modules/carousels',
-        'modules/hero-banner',
-        'modules/pagination',
-        'modules/post-item',
-        'modules/icons';
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Layout
+// Contains all the information for the grid.
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+@import 'layout/row',
+        'layout/column',
+        'layout/size',
+        'layout/position',
+        'layout/gutter',
+        'layout/classes',
+        'layout/layout',
+        'layout/flex-grid',
+        'layout/grid';
 
-// Paritals
-@import 'partials/header',
-        'partials/skip-to-content',
-        'partials/footer',
-        'partials/breadcrumbs';
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Objects
+// Objects are designed patterns, from a pattern library or very inique items such as buttons, typography etc. 
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+@import 'objects/typography',
+        'objects/site-header',
+        'objects/site-navigation',
+        'objects/site-footer',
+        'objects/post-teaser',
+        'objects/callouts',
+        'objects/buttons',
+        'objects/lists',
+        'objects/icons',
+        'objects/pagination',
+        'objects/media-object',
+        'objects/hero-banner';
 
-// Pages
-@import 'pages/home',
-        'pages/contact';
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Components
+// Specific User Interface parts live here.
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+@import 'components/skip-to-content',
+        'components/breadcrumbs',
+        'components/card',
+        'components/news-article',
+        'components/forms';
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Utilities
+// Utilities / helpers which are used throughout the site. This is very specific code bits.
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+@import 'utilities/helpers';

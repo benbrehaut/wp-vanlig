@@ -1,3 +1,22 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-// Fonts
+// Base: _fonts
+// For including fonts
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Default Font Face
+// Feel free to remove this later
+// - - - - - - - - - - - - - - - - - - - - - - - - - 
+@font-face {
+  font-family: system-ui;
+  font-display: swap; // use swap so it loads the fallback font first
+  src: 
+    local(".SFNSText-Light"), 
+    local(".HelveticaNeueDeskInterface-Light"), 
+    local(".LucidaGrandeUI"), 
+    local("Ubuntu Light"), 
+    local("Segoe UI Light"), 
+    local("Roboto-Light"), 
+    local("DroidSans"), 
+    local("Tahoma");
+}
