@@ -34,6 +34,7 @@ const js = {
   outputJSFileCompressed: './main.min.js',
   outputJSFileLocation: './assets/js/dist',
 };
+
 // Main CSS Variables
 // - - - - - - - - - - - - - - - - - -
 const css = {
@@ -46,9 +47,16 @@ const css = {
 
 // Autoprefixer Variables
 // - - - - - - - - - - - - - - - - - -
-var autoprefixerOptions = {
+const autoprefixerOptions = {
   browsers: ['last 25 versions']
 };
+
+// Media Variables
+// - - - - - - - - - - - - - - - - - -
+const media = {
+  imgs: 'assets/imgs',
+  icons: 'assets/icons'
+}
 
 /**
  * @function scripts
@@ -118,9 +126,9 @@ gulp.task('browser-sync', ['scripts', 'styles'], function () {
  * @version v1
  */
 gulp.task('imgs', function () {
-  gulp.src('assets/imgs/*')
+  gulp.src(media.imgs + '/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('assets/imgs'));
+    .pipe(gulp.dest(media.imgs));
 });
 
 /**
@@ -129,9 +137,9 @@ gulp.task('imgs', function () {
  * @version v1
  */
 gulp.task('svgstore', function () {
-  return gulp.src('assets/icons/*.svg')
+  return gulp.src(media.icons + '/*.svg')
     .pipe(svgstore())
-    .pipe(gulp.dest('assets/icons'));
+    .pipe(gulp.dest(media.icons));
 });
 
 /**
