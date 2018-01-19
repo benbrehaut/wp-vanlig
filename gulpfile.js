@@ -22,27 +22,41 @@ var babel = require('gulp-babel');
  */
 
 // Site URL for Browser Sync
-var siteURL                = 'test-theme.uk';
+// - - - - - - - - - - - - - - - - - -
+const siteURL = 'test-theme.uk';
 
 // Main JS Variables
-var jsFiles                = 'assets/js/vendor/**/*.js';
-var mainJSFile             = 'assets/js/scripts.js';
-var outputJSFile           = 'main.js';
-var outputJSFileCompressed = 'main.min.js';
-var outputJSFileLocation   = 'assets/js/dist';
+// - - - - - - - - - - - - - - - - - -
+const js = { 
+  jsFiles: './assets/js/vendor/**/*.js',
+  mainJSFile: './assets/js/scripts.js',
+  outputJSFile: './main.js',
+  outputJSFileCompressed: './main.min.js',
+  outputJSFileLocation: './assets/js/dist',
+};
 
-// Main Sass / CSS files
-var sassFiles                = 'assets/scss/**/*.scss';
-var mainSassFile             = 'assets/scss/style.scss';
-var outputCSSFile            = 'main.css';
-var outputCSSFileCompressed  = 'main.min.css';
-var outputCSSFileLocation    = 'assets/css/dist';
+// Main CSS Variables
+// - - - - - - - - - - - - - - - - - -
+const css = {
+  sassFiles: './assets/scss/**/*.scss',
+  mainSassFile: './assets/scss/style.scss',
+  outputCSSFile: './main.css',
+  outputCSSFileCompressed: './main.min.css',
+  outputCSSFileLocation: './assets/css/dist'
+};
 
-// Autoprefixer
-var autoprefixerOptions = {
+// Autoprefixer Variables
+// - - - - - - - - - - - - - - - - - -
+const autoprefixerOptions = {
   browsers: ['last 25 versions']
 };
 
+// Media Variables
+// - - - - - - - - - - - - - - - - - -
+const media = {
+  imgs: 'assets/imgs',
+  icons: 'assets/icons'
+}
 
 /**
  * @function scripts
@@ -50,16 +64,16 @@ var autoprefixerOptions = {
  * @version v1
  */
 gulp.task('scripts', function () {
-  return gulp.src([jsFiles, mainJSFile])
+  return gulp.src([js.jsFiles, js.mainJSFile])
     .pipe(babel({
       presets: ['env']
     }))
     .pipe(plumber())
-    .pipe(concat(outputJSFile))  // output main JavaScript file without uglify
-    .pipe(gulp.dest(outputJSFileLocation))
+    .pipe(concat(js.outputJSFile))  // output main JavaScript file without uglify
+    .pipe(gulp.dest(js.outputJSFileLocation))
     .pipe(uglify())
-    .pipe(concat(outputJSFileCompressed)) // output main JavaScript file w/ uglify
-    .pipe(gulp.dest(outputJSFileLocation))
+    .pipe(concat(js.outputJSFileCompressed)) // output main JavaScript file w/ uglify
+    .pipe(gulp.dest(js.outputJSFileLocation))
     .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -69,7 +83,7 @@ gulp.task('scripts', function () {
  * @version v1
  */
 gulp.task('styles', function () {
-  return gulp.src(mainSassFile)
+  return gulp.src(css.mainSassFile)
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['scss'],
@@ -77,12 +91,12 @@ gulp.task('styles', function () {
     }).on('error', sass.logError))
     .pipe(prefix(autoprefixerOptions, { cascade: true }))
     .pipe(plumber())
-    .pipe(concat(outputCSSFile)) // output main CSS file without cleanCSS
+    .pipe(concat(css.outputCSSFile)) // output main CSS file without cleanCSS
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest(outputCSSFileLocation))
+    .pipe(gulp.dest(css.outputCSSFileLocation))
     .pipe(cleanCSS())
-    .pipe(concat(outputCSSFileCompressed)) // output main CSS file w/ cleanCSS
-    .pipe(gulp.dest(outputCSSFileLocation))
+    .pipe(concat(css.outputCSSFileCompressed)) // output main CSS file w/ cleanCSS
+    .pipe(gulp.dest(css.outputCSSFileLocation))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -100,8 +114,8 @@ gulp.task('browser-sync', ['scripts', 'styles'], function () {
       '*.twig',
       '**/*.twig',
       'gulpfile.js',
-      outputJSFileLocation + '/*.js',
-      outputCSSFileLocation + '/*.css'
+      js.outputJSFileLocation + '/*.js',
+      css.outputCSSFileLocation + '/*.css'
     ]
   });
 });
@@ -112,9 +126,9 @@ gulp.task('browser-sync', ['scripts', 'styles'], function () {
  * @version v1
  */
 gulp.task('imgs', function () {
-  gulp.src('assets/imgs/*')
+  gulp.src(media.imgs + '/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('assets/imgs'));
+    .pipe(gulp.dest(media.imgs));
 });
 
 /**
@@ -123,9 +137,9 @@ gulp.task('imgs', function () {
  * @version v1
  */
 gulp.task('svgstore', function () {
-  return gulp.src('assets/icons/*.svg')
+  return gulp.src(media.icons + '/*.svg')
     .pipe(svgstore())
-    .pipe(gulp.dest('assets/icons'));
+    .pipe(gulp.dest(media.icons));
 });
 
 /**
@@ -134,8 +148,8 @@ gulp.task('svgstore', function () {
  * @version v1
  */
 gulp.task('watch', function () {
-  gulp.watch(mainJSFile, ['scripts']);
-  gulp.watch(sassFiles, ['styles']);
+  gulp.watch(js.mainJSFile, ['scripts']);
+  gulp.watch(css.sassFiles, ['styles']);
 });
 
 /**
