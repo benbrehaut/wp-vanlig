@@ -22,7 +22,7 @@ get_header();
 
 	<section class="l-wrap">
 		<div class="l-grid l-grid__cols">
-			<?php get_template_part('template-parts/post-teaser'); ?>
+			<?php the_content(); ?>
 		</div>
 	</section>
 
