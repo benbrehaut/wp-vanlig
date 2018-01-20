@@ -13,6 +13,10 @@
     color: $palette-primary;
     margin-left: rem-calc(20);
     margin-right: rem-calc(20);
+
+    @include breakpoint(small only) {
+      color: $palette-accent;
+    }
     
     a {
       text-decoration: none;

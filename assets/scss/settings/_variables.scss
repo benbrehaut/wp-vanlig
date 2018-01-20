@@ -53,16 +53,17 @@ $palette-houzz: #7ac142 !default;
 // - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Typography
 // - - - - - - - - - - - - - - - - - - - - - - - - - 
+$global-font-size: 62.5%;
+$font-size-primary: 1.6rem;
 
 // Font Sizes
 // - - - - - - - -
-$font-size-heading-one: rem-calc(54);
-$font-size-heading-two: rem-calc(44);
-$font-size-heading-three: rem-calc(34);
-$font-size-heading-four: rem-calc(24);
-$font-size-heading-five: rem-calc(16);
-$font-size-heading-six: rem-calc(14);
-$font-size-primary: rem-calc(16);
+$font-size-heading-one: 5.4rem;
+$font-size-heading-two: 4.4rem;
+$font-size-heading-three: 3.4rem;
+$font-size-heading-four: 2.4rem;
+$font-size-heading-five: 1.6rem;
+$font-size-heading-six: 1.4rem;
 $font-size-small: 80%;
 
 
@@ -99,7 +100,7 @@ $z-stack: site, mobileMenu, siteHeader, subMenu, skipToContent, siteOverlay, mod
 // - - - - - - - - - - - - - - - - - - - - - - - - - 
 // Misc Variables
 // - - - - - - - - - - - - - - - - - - - - - - - - - 
-$global-border-radius: rem-calc(0);
+$global-border-radius: 0.0rem;
 $global-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -113,7 +114,7 @@ $global-grid-select: 'normal';
 
 // Grid Width
 // - - - - - - - -
-$global-width: rem-calc(1300);
+$global-width: 130rem;
 
 $global-left: left;
 $global-right: right;
