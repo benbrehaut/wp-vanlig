@@ -21,7 +21,7 @@ get_header();
 ?>
 
 	<section class="l-wrap">
-		<div class="l-grid l-grid__cols">
+		<div class="l-grid l-grid__cols wysiwyg">
 			<?php the_content(); ?>
 		</div>
 	</section>

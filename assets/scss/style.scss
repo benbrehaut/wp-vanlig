@@ -54,7 +54,7 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 // Objects
-// Objects are designed patterns, from a pattern library or very inique items such as buttons, typography etc. 
+// Objects are designed patterns, from a pattern library or very inique items such as buttons, typography etc. Changing these will affect major parts of the site.
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 @import 'objects/typography',
         'objects/site-header',
@@ -67,16 +67,16 @@
         'objects/icons',
         'objects/pagination',
         'objects/media-object',
+        'objects/breadcrumbs',
+        'objects/card',
+        'objects/skip-to-content',
         'objects/hero-banner';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 // Components
 // Specific User Interface parts live here.
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-@import 'components/skip-to-content',
-        'components/breadcrumbs',
-        'components/card',
-        'components/news-article',
+@import 'components/news-article',
         'components/forms';
 
 // - - - - - - - - - - - - - - - - - - - - - - - - -

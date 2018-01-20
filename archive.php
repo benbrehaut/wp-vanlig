@@ -25,9 +25,9 @@ get_header();
 ?>
 
 <!-- posts container -->
-<section class="articles">
+<section class="c-articles">
 
-  <div class="articles-grid">
+  <div class="c-articles__grid">
   <?php
   		/* Start the Loop */
   		while ( have_posts() ) : the_post();
@@ -39,7 +39,7 @@ get_header();
   </div>
 
   <!-- sidebar -->
-  <div class="articles-sidebar">
+  <div class="c-articles-sidebar">
     <?php get_sidebar(); ?>
   </div>
   <!-- sidebar -->
@@ -48,7 +48,7 @@ get_header();
 <!-- /posts container -->
 
 <!-- posts pagination -->
-<div class="articles-pagination">
+<div class="c-articles-pagination">
   <?php pagination(); ?>
 </div>
 <!-- posts pagination -->

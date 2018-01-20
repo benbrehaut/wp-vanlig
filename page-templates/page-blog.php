@@ -20,10 +20,10 @@ get_header();
 <!-- /hero banner image -->
 
 <!-- posts container -->
-<section class="articles">
+<section class="c-articles">
 
   <!-- posts -->
-  <div class="articles-grid">
+  <div class="c-articles__grid">
     <?php
       $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -49,7 +49,7 @@ get_header();
   <!-- /posts -->
 
   <!-- sidebar -->
-  <div class="articles-sidebar">
+  <div class="c-articles-sidebar">
     <?php get_sidebar(); ?>
   </div>
   <!-- sidebar -->
@@ -58,7 +58,7 @@ get_header();
 <!-- /posts container -->
 
 <!-- posts pagination -->
-<div class="articles-pagination">
+<div class="c-articles-pagination">
   <?php
     query_posts($args);
     pagination();
