@@ -1,0 +1,78 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Object: _site-navigation
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.o-site-navigation {
+  display: flex;
+
+  @include breakpoint(small only) {
+    display: block;
+  }
+
+  &__item {
+    color: $palette-primary;
+    margin-left: rem-calc(20);
+    margin-right: rem-calc(20);
+
+    @include breakpoint(small only) {
+      color: $palette-accent;
+    }
+    
+    a {
+      text-decoration: none;
+
+      @include breakpoint(small only) {
+        margin-bottom: rem-calc(10);
+        display: inline-block;
+      }
+    }
+  }
+
+  &__item--has-children:hover {
+    .o-site-navigation__sub-nav {
+      @include breakpoint(medium up) {
+        @include visually-show(1);
+        transform: translateY(0px);
+      }
+    }
+  }
+
+  &__sub-nav {
+    @include unstyled-list;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+
+    li {
+      margin: rem-calc(0 0 5);
+    }
+
+    a {
+      color: $palette-primary;
+    }
+
+    @include breakpoint(small only) {
+      display: block;
+
+      li {
+        margin-bottom: 0;
+      }
+      
+      a {
+        color: $palette-accent;
+        margin-bottom: rem-calc(10);
+      }
+    }
+
+    @include breakpoint(medium up) {
+      @include visually-hidden(-1);
+      transform: translateY(-10px);
+      transition: all .3s cubic-bezier(0.42,0,.58,1);
+      position: absolute;
+      display: block;
+      padding: rem-calc(10);
+      background-color: $palette-tertiary;
+      box-shadow: $global-box-shadow;
+    }
+  }
+}

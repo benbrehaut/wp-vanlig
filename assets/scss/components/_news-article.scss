@@ -1,0 +1,8 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Components: _news-article
+// News article styling
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.c-news-content {
+  @include grid-col;
+}

@@ -59,7 +59,7 @@ function wpseo_manage_options_capability() {
 
   return $manage_options_cap;
 }
-add_filter( 'wpseo_manage_options_capability', 'wpseo_manage_options_capability' );
+add_filter( 'wpseo_manage_options', 'wpseo_manage_options_capability' );
 
 /**
 * Add ACF theme Settings to WP

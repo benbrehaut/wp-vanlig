@@ -20,9 +20,9 @@ get_header();
 		while ( have_posts() ) : the_post();
 ?>
 
-	<section class="index-page">
-		<div class="index-page__column">
-			<?php get_template_part('template-parts/post'); ?>
+	<section class="l-wrap">
+		<div class="l-grid l-grid__cols wysiwyg">
+			<?php the_content(); ?>
 		</div>
 	</section>
 

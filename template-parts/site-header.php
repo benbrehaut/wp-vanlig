@@ -9,31 +9,29 @@
  */
 ?>
 
-<header id="masthead" class="site-header _slab-primary" role="banner">
-  <div class="site-header__top">
-    <div class="site-logo">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="_text-color-secondary">
+<header id="masthead" class="o-site-header u-slab-tertiary" role="banner">
+  <div class="l-wrap o-site-header__row">
+    <div class="o-site-header__logo">
+      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="u-text-color-primary">
         <?php get_template_part('template-parts/site-logo'); ?>
       </a>
     </div>
-    <div class="site-header__toggler js-site-toggle-menu">
-      <button role="button" class="_text-color-secondary _text-caps btn">Menu</button>
+    <div class="o-site-header__toggler">
+      <button role="button" class="js-site-toggle-menu u-text-color-secondary u-text-caps o-site-header__toggle">Menu</button>
     </div>
-    <nav class="js-site-menu site-nav-wrapper" role="navigation">
+    <nav class="js-site-menu o-site-header__nav" role="navigation">
       <?php
         wp_nav_menu( array(
           'theme_location'  => 'site-header-nav',
           'container'       => false,
-          'menu_class'      => 'site-nav site-nav__list',
+          'menu_class'      => 'o-site-navigation o-unstyled-list',
           'fallback_cb'     => false, // Do not fall back to wp_page_menu()
           'walker'          => new Vanlig_Nav_Walker,
         ) );
       ?>
     </nav>
   </div>
-  <div class="site-header__bottom">
-    <div class="site-search">
-        <?php // get_search_form(); ?>
-    </div>
+  <div class="o-site-header__search">
+    <?php // get_search_form(); ?>
   </div>
 </header>
