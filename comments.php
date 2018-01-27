@@ -23,12 +23,12 @@ if ( post_password_required() ) {
 }
 ?>
 
-<section id="comments" class="post-comments">
+<section class="c-article-comments">
 
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
+		<h2 class="c-comments-title o-heading-3">
 			<?php
 				$comments_number = get_comments_number();
 				if ( '1' === $comments_number ) {
@@ -51,7 +51,7 @@ if ( post_password_required() ) {
 			?>
 		</h2>
 
-		<ol class="comment-list">
+		<ol class="c-comment-list">
 			<?php
 				wp_list_comments( array(
 					'avatar_size' => 100,
@@ -69,11 +69,11 @@ if ( post_password_required() ) {
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'vanlig' ); ?></p>
+		<p class="c-no-comments"><?php _e( 'Comments are closed.', 'vanlig' ); ?></p>
 	<?php
 	endif;
 
 	comment_form();
 	?>
 
-</section><!-- #comments -->
+</section>

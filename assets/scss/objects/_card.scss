@@ -1,0 +1,31 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Object: _card
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Variables
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+$c-card-background-color: $palette-tertiary;
+$c-card-box-shadow: $global-box-shadow;
+$c-card-border-color: transparent;
+$c-card-bottom-spacing: $spacing-tertiary;
+$c-card-padding: $spacing-tertiary;
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Card
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.c-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $c-card-background-color;
+  box-shadow: $c-card-box-shadow;
+  border: 1px solid $c-card-border-color;
+  margin-bottom: $c-card-bottom-spacing;
+
+  &__section {
+    padding: $c-card-padding;
+    flex: 1 0 auto;
+  }
+}

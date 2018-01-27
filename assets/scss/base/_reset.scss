@@ -1,23 +1,23 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-// Reset
+// Base: _reset
+// Based on normalize.css v7.0.0
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
 
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
 html {
-  font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -111,17 +111,7 @@ a {
 }
 
 /**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-/**
- * 1. Remove the bottom border in Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
@@ -175,7 +165,7 @@ dfn {
 
 mark {
   background-color: transparent;
-  color: #000;
+  color: inherit;
 }
 
 /**
@@ -320,13 +310,11 @@ button:-moz-focusring,
 }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Correct the padding in Firefox.
  */
 
 fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -361,13 +349,6 @@ progress {
 
 textarea {
   overflow: auto;
-}
-
-/**
- * Remove italics from <address> tag
- */
-address {
-  font-style: normal;
 }
 
 /**

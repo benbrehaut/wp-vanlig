@@ -1,0 +1,63 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Object: _site-header
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.o-site-header {
+  width: 100%;
+  padding-top: rem-calc(18);
+  padding-bottom: rem-calc(18);
+  box-shadow: 0 3px 9px 0 rgba(0,0,0,.19);
+
+  &__row {
+    align-items: center;
+    position: relative;
+  }
+
+  &__logo {
+    margin-right: rem-calc(25);
+    padding-left: rem-calc(10);
+  }
+
+  &__nav {
+    display: block;
+
+    &.is-active {
+      display: block;
+    }
+
+    @include breakpoint(small only) {
+      display: none;
+      position: absolute;
+      top: 42px;
+      left: 0;
+      width: 100%;
+      padding-top: rem-calc(10);
+      padding-bottom: rem-calc(10);
+      background-color: $palette-primary;
+    }
+  }
+
+  &__toggler {
+    display: none;
+
+    @include breakpoint(small only) {
+      display: block;
+    }
+  }
+
+  &__toggle {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    background-color: $palette-accent;
+    padding: rem-calc(10 15);
+
+    &.is-active {
+      opacity: 0.5;
+    }
+  }
+}

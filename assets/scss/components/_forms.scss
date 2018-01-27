@@ -1,0 +1,28 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Components: _forms
+// Typically form styling in here
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+// Form Layout
+// Will allow you to automatically layout inputs together
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Variables
+// - - - - - - - -
+$c-form-layout-spacing: rem-calc(10);
+
+// Form Layout
+// - - - - - - - -
+.c-form-layout {
+  width: 100%;
+  display: flex;
+
+  &__item {
+    flex: 1 1 auto;
+
+    &:not(:first-of-type) {
+      margin-left: $c-form-layout-spacing;
+    }
+  }
+}

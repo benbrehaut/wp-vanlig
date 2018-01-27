@@ -21,7 +21,7 @@
 <!-- /site-footer -->
 
 <!-- SVG Icons -->
-<div class="_sr-hidden">
+<div class="u-element-hidden">
     <?php include_once('assets/icons/svg-defs.svg'); ?>
 </div>
 <!-- /SVG Icons -->
